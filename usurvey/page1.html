@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNISKIN</title>
+	<meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+	<meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+	<link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+	<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css-new/questionnaire.css">
+	<script src="https://static.inertiabiotech.com/timegenes/js/base2.js"></script>
+	<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+	<script src="https://static.inertiabiotech.com/timegenes/js/distpicker.data.js"></script>
+	<script src="https://static.inertiabiotech.com/timegenes/js/distpicker.js"></script>
+</head>
+<form id="myform" name="myform" action="{:url('/member/usurvey/page1')}" method="post">
+<div  class="bg">
+	<h1>皮肤问题问卷调查</h1>
+	<h2>此问卷调查是为了帮助我们更好的了解您的肌肤和生活状态，以便更好的给您推荐适配的护肤方案</h2>
+	<div  class="message">
+		<div><label>年龄</label><input type="text"  name="skinquestion60" value="{php}echo session('skinquestion60');{/php}"> </div>
+		<div><label>民族</label><input type="text" name="skinquestion57" value="{php}echo session('skinquestion57');{/php}"></div>
+		<div class="cm"><label>身高</label><input type="text" name="skinquestion58" value="{php}echo session('skinquestion58');{/php}"><span >cm</span></div>
+		<div class="kg"><label >体重</label><input type="text"  name="skinquestion59" value="{php}echo session('skinquestion59');{/php}"><span >kg</span></div>
+	</div>
+
+	<div data-toggle="distpicker"  class="city">
+		<span>中学居住城市：</span>
+		<select name="province3" data-province="{php}echo session('province3');{/php}"></select><br>
+		<span style="visibility: hidden;">中学居住城市：</span>
+		<select name="city3" data-city="{php}echo session('city3');{/php}"></select>
+	</div>
+
+	<div data-toggle="distpicker"  class="city">
+		<span>长期居住城市：</span>
+		<select name="province" data-province="{php}echo session('province');{/php}"></select><br>
+		<span style="visibility: hidden;">长期居住城市：</span>
+		<select name="city" data-city="{php}echo session('city');{/php}"></select>
+	</div>
+	
+	<div class="produce">
+	  <div>
+		<span style="margin-right: 5px;">育否</span>
+		<input type="radio" name="skinquestion61" id="yes" value="A"  {php} if ( session('skinquestion61') == 'A') { {/php} checked {php} } {/php} class="radio"><label for="yes"  class="radio" style="margin-right: 5px;">是</label>
+		<input type="radio" name="skinquestion61" id="no" value="B" {php} if ( session('skinquestion61') == 'B') { {/php} checked {php} } {/php}  class="radio"><label for="no"  class="radio">否</label><br>
+	  </div>
+	  <div>
+		<input type="radio" name="skinquestion61" id="ready"  value="C"   {php} if ( session('skinquestion61') == 'C') { {/php} checked {php} } {/php}  class="radio"><label for="ready"  class="radio">正在怀孕期</label>
+	  </div>
+	  <div>
+		<input type="radio" name="skinquestion61" id="lact"  value="D"   {php} if ( session('skinquestion61') == 'D') { {/php} checked {php} } {/php}  class="radio"><label for="lact"  class="radio">正在哺乳期</label>
+	  </div>
+	</div>
+</div>
+<div class="paging" id="next_question">
+	<a href="javascript:void(0);">下一项</a>
+</div>
+</form>
+</body>
+<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+<script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+<script>
+	$(function() {
+				$("form").submit(function () {
+					var self = $(this);
+					$.post(self.attr("action"), self.serialize(), success, "json");
+					return false;
+
+					function success(data) {
+						if (data.code) {
+//							var d = dialog({
+//								//icon: 'succeed',
+//								title: '消息',
+//								content: data.msg,
+//								lock: true
+//							});
+//							d.show();
+//							setTimeout(function () {
+//								window.location.href = data.url;
+//								d.close().remove();
+//							}, 2000);
+							window.location.href = data.url;
+						} else {
+							var d = dialog({
+								//icon: 'succeed',
+								title: '错误',
+								content: data.msg,
+								lock: true
+							});
+							d.show();
+							setTimeout(function () {
+								d.close().remove();
+							}, 3000);
+						}
+					}
+				});
+
+				$("#next_question").click(function () {
+					$('form').submit();
+				});
+		});
+
+
+	
+
+</script>
+</html>

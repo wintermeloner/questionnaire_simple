@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css-new/questions56.css">
+<script src="https://static.inertiabiotech.com/timegenes/js/base2.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>UNISKIN</title>
+    <meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+    <meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+</head>
+
+<body>
+<form id="myform" name="myform" action="{:url('/member/usurvey/page4')}" method="post">
+    <h1>皮肤状态自我评定</h1>
+    <h2>三、生活习惯：</h2>
+    <div class="topic  quest52">
+        <div>
+            <span>52、 您平均的吸烟频率为：</span>
+        </div>
+        <ul>
+            <li><input type="radio" class="radio" id="smoke1_52" value="A" {php} if ( session('skinquestion52') == 'A') { {/php} checked {php} } {/php} name="skinquestion52"><label class="radio" for="smoke1_52">A、从不吸烟</label></li>
+            <li><input type="radio" class="radio" id="smoke2_52" value="B" {php} if ( session('skinquestion52') == 'B') { {/php} checked {php} } {/php} name="skinquestion52"><label class="radio" for="smoke2_52">B、一天5支左右</label></li>
+            <li><input type="radio" class="radio" id="smoke3_52" value="C" {php} if ( session('skinquestion52') == 'C') { {/php} checked {php} } {/php} name="skinquestion52"><label class="radio" for="smoke3_52">C、一天半包</label></li>
+            <li><input type="radio" class="radio" id="smoke4_52" value="D" {php} if ( session('skinquestion52') == 'D') { {/php} checked {php} } {/php} name="skinquestion52"><label class="radio" for="smoke4_52">D、一天1包以上</label></li>
+        </ul>
+    </div>
+    <div class="topic quest53 ">
+        <div>
+            <span>53、您的吸烟史有多长：</span>
+        </div>
+        <ul>
+            <li><input type="radio" class="radio" id="smoke1_53" value="A" {php} if ( session('skinquestion53') == 'A') { {/php} checked {php} } {/php} name="skinquestion53"><label class="radio" for="smoke1_53">A、从不吸烟</label></li>
+            <li><input type="radio" class="radio" id="smoke2_53" value="B" {php} if ( session('skinquestion53') == 'B') { {/php} checked {php} } {/php} name="skinquestion53"><label class="radio" for="smoke2_53">B、2年以内</label></li>
+            <li><input type="radio" class="radio" id="smoke3_53" value="C" {php} if ( session('skinquestion53') == 'C') { {/php} checked {php} } {/php} name="skinquestion53"><label class="radio" for="smoke3_53">C、10年以内</label></li>
+            <li><input type="radio" class="radio" id="smoke4_53" value="D" {php} if ( session('skinquestion53') == 'D') { {/php} checked {php} } {/php} name="skinquestion53"><label class="radio" for="smoke4_53">D、10年以上</label></li>
+        </ul>
+    </div>
+    <div class="topic">
+        <div>
+            <span>54、您的生理周期是否规律：</span>
+        </div>
+        <ul>
+            <li><input type="radio" class="radio" id="smoke1_54" value="A" {php} if ( session('skinquestion54') == 'A') { {/php} checked {php} } {/php} name="skinquestion54"><label class="radio" for="smoke1_54">A、例假间隔时间超过35天或者小于21天</label></li>
+            <li><input type="radio" class="radio" id="smoke2_54" value="B" {php} if ( session('skinquestion54') == 'B') { {/php} checked {php} } {/php} name="skinquestion54"><label class="radio" for="smoke2_54">B、例假持续时间超过7天或小于3天</label></li>
+            <li><input type="radio" class="radio" id="smoke3_54" value="C" {php} if ( session('skinquestion54') == 'C') { {/php} checked {php} } {/php} name="skinquestion54"><label class="radio" for="smoke3_54">C、已过更年期</label></li>
+            <li><input type="radio" class="radio" id="smoke4_54" value="D" {php} if ( session('skinquestion54') == 'D') { {/php} checked {php} } {/php} name="skinquestion54"><label class="radio" for="smoke4_54">D、由于其他原因没有例假</label></li>
+            <li><input type="radio" class="radio" id="smoke5_54" value="E" {php} if ( session('skinquestion54') == 'E') { {/php} checked {php} } {/php} name="skinquestion54"><label class="radio" for="smoke5_54">E、大部分时间例假正常</label></li>
+        </ul>
+    </div>
+    <div class="topic  quest55">
+        <div>
+            <span>55、您的脱发情况：</span>
+        </div>
+        <ul>
+            <li><input type="radio" class="radio" id="smoke1_55" value="A" {php} if ( session('skinquestion55') == 'A') { {/php} checked {php} } {/php} name="skinquestion55"><label class="radio" for="smoke1_55">A、不脱发</label></li>
+            <li><input type="radio" class="radio" id="smoke2_55" value="B" {php} if ( session('skinquestion55') == 'B') { {/php} checked {php} } {/php} name="skinquestion55"><label class="radio" for="smoke2_55">B、脱发，但不集中在头前部和头顶 </label></li>
+            <li><input type="radio" class="radio" id="smoke3_55" value="C" {php} if ( session('skinquestion55') == 'C') { {/php} checked {php} } {/php} name="skinquestion55"><label class="radio" for="smoke3_55">C、脱发，且特别集中在头前部和头顶</label></li>
+            <li><input type="radio" class="radio" id="smoke4_55" value="D" {php} if ( session('skinquestion55') == 'D') { {/php} checked {php} } {/php} name="skinquestion55"><label class="radio" for="smoke4_55">D、掉发不严重，但是头发少</label></li>
+            <li><input type="radio" class="radio" id="smoke5_55" value="E" {php} if ( session('skinquestion55') == 'E') { {/php} checked {php} } {/php} name="skinquestion55"><label class="radio" for="smoke5_55">E、不确定</label></li>
+        </ul>
+    </div>
+
+    <div class="topic  quest56" >
+        <div>
+            <span>56、您脱发情况是伴随以下情况吗：（55题不是A）</span>
+        </div>
+        <ul>
+            <li><input type="radio" class="radio" id="smoke1" value="A" {php} if ( session('skinquestion56') == 'A') { {/php} checked {php} } {/php} name="skinquestion56" ><label class="radio" for="smoke1">A、明显的体重变化</label></li>
+            <li><input type="radio" class="radio" id="smoke2" value="B" {php} if ( session('skinquestion56') == 'B') { {/php} checked {php} } {/php} name="skinquestion56"  ><label class="radio" for="smoke2">B、工作和生活压力 </label></li>
+            <li><input type="radio" class="radio" id="smoke3" value="C" {php} if ( session('skinquestion56') == 'C') { {/php} checked {php} } {/php} name="skinquestion56" ><label class="radio" for="smoke3">C、其他部位的毛发变化（如唇毛）</label></li>
+            <li><input type="radio" class="radio" id="smoke4" value="D" {php} if ( session('skinquestion56') == 'D') { {/php} checked {php} } {/php} name="skinquestion56"  ><label class="radio" for="smoke4">D、都不是</label></li>
+        </ul>
+    </div>
+
+    <div class="paging">
+        <a href="{:url('/member/usurvey/page3')}" >上一项</a>
+        <a href="javascript:void(0);"  id="next_question">完成</a>
+    </div>
+</form>
+</body>
+<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+<script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+<script>
+    $(function() {
+        $("form").submit(function (){
+            var self = $(this);
+            $.post(self.attr("action"), self.serialize(), success, "json");
+            return false;
+
+            function success(data) {
+                if (data.code) {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '消息',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        window.location.href = data.url;
+                        d.close().remove();
+                    }, 3000);
+                } else {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '错误',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                    }, 3000);
+                }
+            }
+        });
+
+        $("#next_question").click(function () {
+            $('form').submit();
+        });
+    });
+
+    $(function(){
+        $(".quest52  label").click(function(){
+
+            var v = $(this).prev().val();
+            if (v != "A" ){
+
+                $('.quest53 label ').css({
+
+                    color:"#191919",
+                });
+                $("input[name='skinquestion53'] ").attr("disabled",false);
+            }else{
+                $('.quest53  label').css({
+                    color:"#dfdada",
+                });
+                $("input[name='skinquestion53']").prop("checked",false);
+                // $("input[name='skinquestion34'] [value=B]").prop("checked",false);
+                // $("#special label").unbind("click" );
+                $("input[name='skinquestion53'] ").attr("disabled",true);
+            }
+
+        });
+    });
+
+    $(function(){
+        $(".quest55  label").click(function(){
+
+            var v = $(this).prev().val();
+            if (v != "A" ){
+
+                $('.quest56 label ').css({
+
+                    color:"#191919",
+                });
+                $("input[name='skinquestion56'] ").attr("disabled",false);
+            }else{
+                $('.quest56 label').css({
+                    color:"#dfdada",
+                });
+                $("input[name='skinquestion56']").prop("checked",false);
+                // $("input[name='skinquestion34'] [value=B]").prop("checked",false);
+                // $("#special label").unbind("click" );
+                $("input[name='skinquestion56'] ").attr("disabled",true);
+            }
+
+        });
+
+    });
+</script>
+</html>

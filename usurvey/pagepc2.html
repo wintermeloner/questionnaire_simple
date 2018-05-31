@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css-new/questions56.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css/questionnaire-css/questionnaire-first.css">
+<script src="https://static.inertiabiotech.com/timegenes/js/base2.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNISKIN</title>
+    <meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+    <meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform" name="myform" action="{:url('/member/usurvey/pagepc2')}" method="post">
+            <h2>一、肌肤状态</h2>
+            <div class="topic">
+                <div>
+                    <span>1、您的皮肤类型为：</span>
+                </div>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="c1" value="A" name="skinquestion1" {php} if ( session( 'skinquestion1')=='A'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label name="c1" for="c1" class="radio">A、干性</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c2" value="B" name="skinquestion1" {php} if ( session( 'skinquestion1')=='B'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label name="c2" for="c2" class="radio">B、中性</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c3" value="C" name="skinquestion1" {php} if ( session( 'skinquestion1')=='C'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label name="c3" for="c3" class="radio">C、混合性</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c4" value="D" name="skinquestion1" {php} if ( session( 'skinquestion1')=='D'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label name="c4" for="c4" class="radio">D、油性</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="c5" value="E" name="skinquestion1" {php} if ( session( 'skinquestion1')=='E'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label name="c5" for="c5" class="radio">E、不确定</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>2、您的敏感/耐受皮肤类型是：</span>
+                </div>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="d1" value="A" name="skinquestion2" {php} if ( session( 'skinquestion2')=='A'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label class="radio" for="d1">A、极度不敏感性皮肤</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d2" value="B" name="skinquestion2" {php} if ( session( 'skinquestion2')=='B'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label class="radio" for="d2">B、轻度不敏感性皮肤</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d3" value="C" name="skinquestion2" {php} if ( session( 'skinquestion2')=='C'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label class="radio" for="d3">C、轻度敏感性皮肤</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d4" value="D" name="skinquestion2" {php} if ( session( 'skinquestion2')=='D'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label class="radio" for="d4">D、重度敏感性皮肤</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="d5" value="E" name="skinquestion2" {php} if ( session( 'skinquestion2')=='E'
+                            ) { {/php} checked {php} } {/php} class="radio">
+                        <label class="radio" for="d5">E、不确定</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic  quest3">
+                <div>
+                    <span>3、困扰你的主要的皮肤症状是什么，按照困扰程度从强到弱排序。首要困扰症状？其次困扰？第三困扰？（各单选）</span>
+                </div>
+                <table border="1" cellpadding="0" cellspacing="0" align="center">
+                    <tr align="center">
+                        <td></td>
+                        <td>首要</td>
+                        <td>其次</td>
+                        <td>第三</td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">A、泪沟/法令纹/嘴角纹</td>
+                        <td>
+                            <input type="radio" class="radio" id="first1" value="A" {php} if ( session( 'skinquestion3_1')=='A'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first1"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second1" value="A" {php} if ( session( 'skinquestion3_2')=='A'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second1"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last1" value="A" {php} if ( session( 'skinquestion3_3')=='A'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last1"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">B、抬头纹/眉间纹/眼尾纹</td>
+                        <td>
+                            <input type="radio" class="radio" id="first2" value="B" {php} if ( session( 'skinquestion3_1')=='B'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first2"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second2" value="B" {php} if ( session( 'skinquestion3_2')=='B'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second2"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last2" value="B" {php} if ( session( 'skinquestion3_3')=='B'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last2"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">C、痘痘</td>
+                        <td>
+                            <input type="radio" class="radio" id="first3" value="C" {php} if ( session( 'skinquestion3_1')=='C'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first3"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second3" value="C" {php} if ( session( 'skinquestion3_2')=='C'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second3"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last3" value="C" {php} if ( session( 'skinquestion3_3')=='C'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last3"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">D、痘印</td>
+                        <td>
+                            <input type="radio" class="radio" id="first4" value="D" {php} if ( session( 'skinquestion3_1')=='D'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first4"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second4" value="D" {php} if ( session( 'skinquestion3_2')=='D'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second4"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last4" value="D" {php} if ( session( 'skinquestion3_3')=='D'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last4"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">E、毛孔粗大</td>
+                        <td>
+                            <input type="radio" class="radio" id="first5" value="E" {php} if ( session( 'skinquestion3_1')=='E'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first5"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second5" value="E" {php} if ( session( 'skinquestion3_2')=='E'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second5"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last5" value="E" {php} if ( session( 'skinquestion3_3')=='E'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last5"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">F、油光粘腻 </td>
+                        <td>
+                            <input type="radio" class="radio" id="first6" value="F" {php} if ( session( 'skinquestion3_1')=='F'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first6"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second6" value="F" {php} if ( session( 'skinquestion3_2')=='F'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second6"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last6" value="F" {php} if ( session( 'skinquestion3_3')=='F'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last6"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">G、皮肤粗糙</td>
+                        <td>
+                            <input type="radio" class="radio" id="first7" value="G" {php} if ( session( 'skinquestion3_1')=='G'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first7"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second7" value="G" {php} if ( session( 'skinquestion3_2')=='G'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second7"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last7" value="G" {php} if ( session( 'skinquestion3_3')=='G'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last7"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">H、皮肤干燥</td>
+                        <td>
+                            <input type="radio" class="radio" id="first8" value="H" {php} if ( session( 'skinquestion3_1')=='H'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first8"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second8" value="H" {php} if ( session( 'skinquestion3_2')=='H'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second8"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last8" value="H" {php} if ( session( 'skinquestion3_3')=='H'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last8"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">I、色斑/晒斑</td>
+                        <td>
+                            <input type="radio" class="radio" id="first9" value="I" {php} if ( session( 'skinquestion3_1')=='I'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first9"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second9" value="I" {php} if ( session( 'skinquestion3_2')=='I'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second9"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last9" value="I" {php} if ( session( 'skinquestion3_3')=='I'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last9"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">J、红血丝/容易发痒脱皮</td>
+                        <td>
+                            <input type="radio" class="radio" id="first10" value="J" {php} if ( session( 'skinquestion3_1')=='J'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first10"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second10" value="J" {php} if ( session( 'skinquestion3_2')=='J'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second10"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last10" value="J" {php} if ( session( 'skinquestion3_3')=='J'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last10"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">K、皮肤暗黑</td>
+                        <td>
+                            <input type="radio" class="radio" id="first11" value="K" {php} if ( session( 'skinquestion3_1')=='K'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first11"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second11" value="K" {php} if ( session( 'skinquestion3_2')=='K'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second11"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last11" value="K" {php} if ( session( 'skinquestion3_3')=='K'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last11"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">L、皮肤蜡黄</td>
+                        <td>
+                            <input type="radio" class="radio" id="first12" value="L" {php} if ( session( 'skinquestion3_1')=='L'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first12"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second12" value="L" {php} if ( session( 'skinquestion3_2')=='L'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second12"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last12" value="L" {php} if ( session( 'skinquestion3_3')=='L'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last12"></label>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="left" style="padding-left: 0.15rem;">M、都不是</td>
+                        <td>
+                            <input type="radio" class="radio" id="first13" value="M" {php} if ( session( 'skinquestion3_1')=='M'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_1">
+                            <label class="radio" for="first13"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="second13" value="M" {php} if ( session( 'skinquestion3_2')=='M'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_2">
+                            <label class="radio" for="second13"></label>
+                        </td>
+                        <td>
+                            <input type="radio" class="radio" id="last13" value="M" {php} if ( session( 'skinquestion3_3')=='M'
+                                ) { {/php} checked {php} } {/php} name="skinquestion3_3">
+                            <label class="radio" for="last13"></label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="topic" style="margin-top: 0.4rem;">
+                <div>
+                    <span>4. 夏天时在没有防晒措施的情况下出门，您的皮肤在户外2小时后会出现以下哪种情况：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="g1" value="A" {php} if ( session( 'skinquestion4')=='A' ) { {/php}
+                            checked {php} } {/php} name="skinquestion4">
+                        <label class="radio" for="g1">A、24小时内有红疹灼热等不适感，但肤色在7天内没有变化</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="g2" value="B" {php} if ( session( 'skinquestion4')=='B' ) { {/php}
+                            checked {php} } {/php} name="skinquestion4">
+                        <label class="radio" for="g2">B、24小时内皮肤有稍微不适感，且肤色在7天内会变深</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="g3" value="C" {php} if ( session( 'skinquestion4')=='C' ) { {/php}
+                            checked {php} } {/php} name="skinquestion4">
+                        <label class="radio" for="g3">C、24小时内无不适感，肤色明显变黑</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="g4" value="D" {php} if ( session( 'skinquestion4')=='D' ) { {/php}
+                            checked {php} } {/php} name="skinquestion4">
+                        <label class="radio" for="g4">D、其他情况</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>5、你的脸经常会发红过敏（灼热，发痒，刺痛，脱皮）吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="guomin5_1" value="A" {php} if ( session( 'skinquestion5')=='A'
+                            ) { {/php} checked {php} } {/php} name="skinquestion5">
+                        <label class="radio" for="guomin5_1">A、从不</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="guomin5_2" value="B" {php} if ( session( 'skinquestion5')=='B'
+                            ) { {/php} checked {php} } {/php} name="skinquestion5">
+                        <label class="radio" for="guomin5_2">B、很少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="guomin5_3" value="C" {php} if ( session( 'skinquestion5')=='C'
+                            ) { {/php} checked {php} } {/php} name="skinquestion5">
+                        <label class="radio" for="guomin5_3">C、每月至少出现一次</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="guomin5_4" value="D" {php} if ( session( 'skinquestion5')=='D'
+                            ) { {/php} checked {php} } {/php} name="skinquestion5">
+                        <label class="radio" for="guomin5_4">D、每周至少出现一次</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>6、在受到至少30分钟的日照后，您的皮肤会变红或者发痒吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="guomin1" value="A" {php} if ( session( 'skinquestion6')=='A' )
+                            { {/php} checked {php} } {/php} name="skinquestion6">
+                        <label class="radio" for="guomin1">A、从不</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="guomin2" value="B" {php} if ( session( 'skinquestion6')=='B' )
+                            { {/php} checked {php} } {/php} name="skinquestion6">
+                        <label class="radio" for="guomin2">B、很少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="guomin3" value="C" {php} if ( session( 'skinquestion6')=='C' )
+                            { {/php} checked {php} } {/php} name="skinquestion6">
+                        <label class="radio" for="guomin3">C、经常</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="guomin4" value="D" {php} if ( session( 'skinquestion6')=='D' )
+                            { {/php} checked {php} } {/php} name="skinquestion6">
+                        <label class="radio" for="guomin4">D、总是如此</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>7、护肤产品会使您的面部出现泛红，发痒，脱皮或者刺痛吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="product1" value="A" {php} if ( session( 'skinquestion7')=='A' )
+                            { {/php} checked {php} } {/php} name="skinquestion7">
+                        <label class="radio" for="product1">A、从不</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="product2" value="B" {php} if ( session( 'skinquestion7')=='B' )
+                            { {/php} checked {php} } {/php} name="skinquestion7">
+                        <label class="radio" for="product2">B、 很少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="product3" value="C" {php} if ( session( 'skinquestion7')=='C' )
+                            { {/php} checked {php} } {/php} name="skinquestion7">
+                        <label class="radio" for="product3"> C、经常</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="product4" value="D" {php} if ( session( 'skinquestion7')=='D' )
+                            { {/php} checked {php} } {/php} name="skinquestion7">
+                        <label class="radio" for="product4">D、总是如此</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="product5" value="E" {php} if ( session( 'skinquestion7')=='E' )
+                            { {/php} checked {php} } {/php} name="skinquestion7">
+                        <label class="radio" for="product5"> E、不使用护肤品</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>8、如果之前皮肤对某类护肤产品有刺痛、泛红等反应，请写下该产品名称
+                        <input type="text" style="border: none;border-bottom: 1px solid #666666;margin-left: 5px;width: 200px;"
+                            name="skinquestion8" value="{php} if ( session('skinquestion8') != '' ) { echo session('skinquestion8'); }{/php}">
+                    </span>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>9、去角质产品会使您的面部出现泛红，发痒，脱皮或者刺痛吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="horn1" value="A" {php} if ( session( 'skinquestion9')=='A' ) {
+                            {/php} checked {php} } {/php} name="skinquestion9">
+                        <label class="radio" for="horn1">A、从不</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="horn2" value="B" {php} if ( session( 'skinquestion9')=='B' ) {
+                            {/php} checked {php} } {/php} name="skinquestion9">
+                        <label class="radio" for="horn2">B、 很少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="horn3" value="C" {php} if ( session( 'skinquestion9')=='C' ) {
+                            {/php} checked {php} } {/php} name="skinquestion9">
+                        <label class="radio" for="horn3">C、经常</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="horn4" value="D" {php} if ( session( 'skinquestion9')=='D' ) {
+                            {/php} checked {php} } {/php} name="skinquestion9">
+                        <label class="radio" for="horn4">D、总是如此</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="horn5" value="E" {php} if ( session( 'skinquestion9')=='E' ) {
+                            {/php} checked {php} } {/php} name="skinquestion9">
+                        <label class="radio" for="horn5">E、我不使用去角质产品</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>10、防晒产品会使你的面部出现泛红，发痒，脱皮或者刺痛吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="burn10_1" value="A" {php} if ( session( 'skinquestion10')=='A'
+                            ) { {/php} checked {php} } {/php} name="skinquestion10">
+                        <label class="radio" for="burn10_1">A、从不</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn10_2" value="B" {php} if ( session( 'skinquestion10')=='B'
+                            ) { {/php} checked {php} } {/php} name="skinquestion10">
+                        <label class="radio" for="burn10_2">B、 很少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn10_3" value="C" {php} if ( session( 'skinquestion10')=='C'
+                            ) { {/php} checked {php} } {/php} name="skinquestion10">
+                        <label class="radio" for="burn10_3">C、经常</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn10_4" value="D" {php} if ( session( 'skinquestion10')=='D'
+                            ) { {/php} checked {php} } {/php} name="skinquestion10">
+                        <label class="radio" for="burn10_4">D、总是如此</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn10_5" value="E" {php} if ( session( 'skinquestion10')=='E'
+                            ) { {/php} checked {php} } {/php} name="skinquestion10">
+                        <label class="radio" for="burn10_5">E、不使用防晒产品</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>11、洁面产品会使您的皮肤出现泛红，发痒，脱皮或者刺痛吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="burn1" value="A" {php} if ( session( 'skinquestion11')=='A' ) {
+                            {/php} checked {php} } {/php} name="skinquestion11">
+                        <label class="radio" for="burn1">A、从不</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn2" value="B" {php} if ( session( 'skinquestion11')=='B' ) {
+                            {/php} checked {php} } {/php} name="skinquestion11">
+                        <label class="radio" for="burn2">B、 很少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn3" value="C" {php} if ( session( 'skinquestion11')=='C' ) {
+                            {/php} checked {php} } {/php} name="skinquestion11">
+                        <label class="radio" for="burn3">C、经常</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn4" value="D" {php} if ( session( 'skinquestion11')=='D' ) {
+                            {/php} checked {php} } {/php} name="skinquestion11">
+                        <label class="radio" for="burn4">D、总是如此</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="burn5" value="E" {php} if ( session( 'skinquestion11')=='E' ) {
+                            {/php} checked {php} } {/php} name="skinquestion11">
+                        <label class="radio" for="burn5">E、不使用洁面产品</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>12、你脸部的油脂情况是：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="g21" value="A" {php} if ( session( 'skinquestion12')=='A' ) { {/php}
+                            checked {php} } {/php} name="skinquestion12">
+                        <label class="radio" for="g21">A、冬天也脸上总是有油光 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="g22" value="B" {php} if ( session( 'skinquestion12')=='B' ) { {/php}
+                            checked {php} } {/php} name="skinquestion12">
+                        <label class="radio" for="g22">B、平时只有T字区容易泛油</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="g23" value="C" {php} if ( session( 'skinquestion12')=='C' ) { {/php}
+                            checked {php} } {/php} name="skinquestion12">
+                        <label class="radio" for="g23">C、夏天不使用保湿产品脸也会干燥紧绷</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="g24" value="D" {php} if ( session( 'skinquestion12')=='D' ) { {/php}
+                            checked {php} } {/php} name="skinquestion12">
+                        <label class="radio" for="g24">D、都不是</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>13、您脸上哪里有毛孔粗大问题：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="big1" value="A" {php} if ( session( 'skinquestion13')=='A' ) {
+                            {/php} checked {php} } {/php} name="skinquestion13">
+                        <label class="radio" for="big1">A、没有</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="big2" value="B" {php} if ( session( 'skinquestion13')=='B' ) {
+                            {/php} checked {php} } {/php} name="skinquestion13">
+                        <label class="radio" for="big2">B、T字部位（包括鼻翼两侧）</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="big3" value="C" {php} if ( session( 'skinquestion13')=='C' ) {
+                            {/php} checked {php} } {/php} name="skinquestion13">
+                        <label class="radio" for="big3">C、脸颊</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="big4" value="D" {php} if ( session( 'skinquestion13')=='D' ) {
+                            {/php} checked {php} } {/php} name="skinquestion13">
+                        <label class="radio" for="big4">D、T字部位及脸颊</label>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>14、过去3个月中发生痘痘的情况：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="month1" value="A" {php} if ( session( 'skinquestion14')=='A' )
+                            { {/php} checked {php} } {/php} name="skinquestion14">
+                        <label class="radio" for="month1">A、没有痘痘或仅有生理期有痘痘</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="month2" value="B" {php} if ( session( 'skinquestion14')=='B' )
+                            { {/php} checked {php} } {/php} name="skinquestion14">
+                        <label class="radio" for="month2">B、偶尔有痘痘出现</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="month3" value="C" {php} if ( session( 'skinquestion14')=='C' )
+                            { {/php} checked {php} } {/php} name="skinquestion14">
+                        <label class="radio" for="month3">C、频繁有少量痘痘出现</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="month4" value="D" {php} if ( session( 'skinquestion14')=='D' )
+                            { {/php} checked {php} } {/php} name="skinquestion14">
+                        <label class="radio" for="month4">D、经常有痘痘</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>15、颈及胸背部发生痘痘的情况：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="dou1_15" value="A" {php} if ( session( 'skinquestion15')=='A' )
+                            { {/php} checked {php} } {/php} name="skinquestion15">
+                        <label class="radio" for="dou1_15">A、没有痘痘</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou2_15" value="B" {php} if ( session( 'skinquestion15')=='B' )
+                            { {/php} checked {php} } {/php} name="skinquestion15">
+                        <label class="radio" for="dou2_15">B、偶有闭口</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou3_15" value="C" {php} if ( session( 'skinquestion15')=='C' )
+                            { {/php} checked {php} } {/php} name="skinquestion15">
+                        <label class="radio" for="dou3_15">C、比较明显的突起痘痘（丘疹）</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou4_15" value="D" {php} if ( session( 'skinquestion15')=='D' )
+                            { {/php} checked {php} } {/php} name="skinquestion15">
+                        <label class="radio" for="dou4_15">D、有脓疱</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou5_15" value="E" {php} if ( session( 'skinquestion15')=='E' )
+                            { {/php} checked {php} } {/php} name="skinquestion15">
+                        <label class="radio" for="dou5_15">E、有囊肿</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>16、在以往经验中，哪一类方法能解决您的粉刺问题：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="dou1" value="A" {php} if ( session( 'skinquestion16')=='A' ) {
+                            {/php} checked {php} } {/php} name="skinquestion16">
+                        <label class="radio" for="dou1">A、顺其自然</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou2" value="B" {php} if ( session( 'skinquestion16')=='B' ) {
+                            {/php} checked {php} } {/php} name="skinquestion16">
+                        <label class="radio" for="dou2">B、祛痘类护肤品</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou3" value="C" {php} if ( session( 'skinquestion16')=='C' ) {
+                            {/php} checked {php} } {/php} name="skinquestion16">
+                        <label class="radio" for="dou3">C、处方药物</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou4" value="D" {php} if ( session( 'skinquestion16')=='D' ) {
+                            {/php} checked {php} } {/php} name="skinquestion16">
+                        <label class="radio" for="dou4">D、无论怎样都无法解决 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="dou5" value="E" {php} if ( session( 'skinquestion16')=='E' ) {
+                            {/php} checked {php} } {/php} name="skinquestion16">
+                        <label class="radio" for="dou5">E、没有痘痘</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>17、请写下对您效果最好的祛痘护肤品或者药品
+                        <input type="text" style="border: none;border-bottom: 1px solid #666666;margin-left: 5px;width: 200px;"
+                            name="skinquestion17" value="{php} if ( session('skinquestion17') != '' ) { echo session('skinquestion17'); }{/php}">
+                    </span>
+                </div>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>18、您长过痘痘的地方会留下棕色/黑色印记吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="black1" value="A" {php} if ( session( 'skinquestion18')=='A' )
+                            { {/php} checked {php} } {/php} name="skinquestion18">
+                        <label class="radio" for="black1">A、经常会留印</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="black2" value="B" {php} if ( session( 'skinquestion18')=='B' )
+                            { {/php} checked {php} } {/php} name="skinquestion18">
+                        <label class="radio" for="black2">B、偶尔会留印</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="black3" value="C" {php} if ( session( 'skinquestion18')=='C' )
+                            { {/php} checked {php} } {/php} name="skinquestion18">
+                        <label class="radio" for="black3">C、不会留印</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="black4" value="D" {php} if ( session( 'skinquestion18')=='D' )
+                            { {/php} checked {php} } {/php} name="skinquestion18">
+                        <label class="radio" for="black4">D、不长痘痘</label>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>19、您面颊上会长斑点/斑块吗（可多选）：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="ban1_19" value="A" {php} if ( isset(session(
+                            'skinquestion19')[0]) && session( 'skinquestion19')[0]=='A' ) { {/php} checked {php} } {/php} name="skinquestion19[0]">
+                        <label class="checkbox" for="ban1_19">A、有遗传性雀斑，斑点在日晒后会加深颜色</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="ban2_19" value="B" {php} if ( isset(session(
+                            'skinquestion19')[1]) && session( 'skinquestion19')[1]=='B' ) { {/php} checked {php} } {/php} name="skinquestion19[1]">
+                        <label class="checkbox" for="ban2_19">B、有曝晒后引发的晒斑</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="ban3_19" value="C" {php} if ( isset(session(
+                            'skinquestion19')[2]) && session( 'skinquestion19')[2]=='C' ) { {/php} checked {php} } {/php} name="skinquestion19[2]">
+                        <label class="checkbox" for="ban3_19">C、有黄褐斑/蝴蝶斑/妊娠斑/肝斑</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="ban4_19" value="D" {php} if ( isset(session(
+                            'skinquestion19')[3]) && session( 'skinquestion19')[3]=='D' ) { {/php} checked {php} } {/php} name="skinquestion19[3]">
+                        <label class="checkbox" for="ban4_19">D、其他斑点</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="ban5_19" value="E" {php} if ( isset(session(
+                            'skinquestion19')[4]) && session( 'skinquestion19')[4]=='E' ) { {/php} checked {php} } {/php} name="skinquestion19[4]">
+                        <label class="checkbox" for="ban5_19">E、没有斑点/斑块</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>20、您曾被诊断为酒槽鼻（玫瑰痤疮）吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="ban1" value="A" {php} if ( session( 'skinquestion20')=='A' ) {
+                            {/php} checked {php} } {/php} name="skinquestion20">
+                        <label class="radio" for="ban1">A、没有</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="ban2" value="B" {php} if ( session( 'skinquestion20')=='B' ) {
+                            {/php} checked {php} } {/php} name="skinquestion20">
+                        <label class="radio" for="ban2">B、没有，但朋友熟人说我有</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="ban3" value="C" {php} if ( session( 'skinquestion20')=='C' ) {
+                            {/php} checked {php} } {/php} name="skinquestion20">
+                        <label class="radio" for="ban3">C、是，但不严重</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="ban4" value="D" {php} if ( session( 'skinquestion20')=='D' ) {
+                            {/php} checked {php} } {/php} name="skinquestion20">
+                        <label class="radio" for="ban4">D、是，而且症状严重</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="ban5" value="E" {php} if ( session( 'skinquestion20')=='E' ) {
+                            {/php} checked {php} } {/php} name="skinquestion20">
+                        <label class="radio" for="ban5">E、不确定</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>21、您脸部曾被诊断为局部性皮炎，湿疹，或接触性皮炎吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="medical1_21" value="A" {php} if ( session( 'skinquestion21')=='A'
+                            ) { {/php} checked {php} } {/php} name="skinquestion21">
+                        <label class="radio" for="medical1_21">A、没有</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical2_21" value="B" {php} if ( session( 'skinquestion21')=='B'
+                            ) { {/php} checked {php} } {/php} name="skinquestion21">
+                        <label class="radio" for="medical2_21">B、 没有，但朋友熟人说我有 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical3_21" value="C" {php} if ( session( 'skinquestion21')=='C'
+                            ) { {/php} checked {php} } {/php} name="skinquestion21">
+                        <label class="radio" for="medical3_21">C、是，但不严重</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical4_21" value="D" {php} if ( session( 'skinquestion21')=='D'
+                            ) { {/php} checked {php} } {/php} name="skinquestion21">
+                        <label class="radio" for="medical4_21">D、是，而且症状严重</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical5_21" value="E" {php} if ( session( 'skinquestion21')=='E'
+                            ) { {/php} checked {php} } {/php} name="skinquestion21">
+                        <label class="radio" for="medical5_21">E、不确定</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>22、您的家人曾被诊断为局部性皮炎，湿疹，或接触性皮炎吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="medical1_22" value="A" {php} if ( session( 'skinquestion22')=='A'
+                            ) { {/php} checked {php} } {/php} name="skinquestion22">
+                        <label class="radio" for="medical1_22">A、没有</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical2_22" value="B" {php} if ( session( 'skinquestion22')=='B'
+                            ) { {/php} checked {php} } {/php} name="skinquestion22">
+                        <label class="radio" for="medical2_22">B、一个 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical3_22" value="C" {php} if ( session( 'skinquestion22')=='C'
+                            ) { {/php} checked {php} } {/php} name="skinquestion22">
+                        <label class="radio" for="medical3_22">C、好几个</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical4" value="D" {php} if ( session( 'skinquestion22')=='D'
+                            ) { {/php} checked {php} } {/php} name="skinquestion22">
+                        <label class="radio" for="medical4">D、很多家人都是</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical5" value="E" {php} if ( session( 'skinquestion22')=='E'
+                            ) { {/php} checked {php} } {/php} name="skinquestion22">
+                        <label class="radio" for="medical5">E、不确定</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>23、你现在脸上的鱼尾纹/抬头纹/眉间纹属于以下哪种情况：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="medical1" value="A" {php} if ( session( 'skinquestion23')=='A'
+                            ) { {/php} checked {php} } {/php} name="skinquestion23">
+                        <label class="radio" for="medical1">A、没有，即使在微笑或皱眉头时也没有</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical2" value="B" {php} if ( session( 'skinquestion23')=='B'
+                            ) { {/php} checked {php} } {/php} name="skinquestion23">
+                        <label class="radio" for="medical2">B、只有在微笑或皱眉头时才有 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="medical3" value="C" {php} if ( session( 'skinquestion23')=='C'
+                            ) { {/php} checked {php} } {/php} name="skinquestion23">
+                        <label class="radio" for="medical3">C、面无表情也有皱纹</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>24、有无整容或者微整形的经历（可多选）：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime1_24" value="A" {php} if ( isset(session(
+                            'skinquestion24')[0]) && session( 'skinquestion24')[0]=='A' ) { {/php} checked {php} } {/php} name="skinquestion24[0]">
+                        <label class="checkbox" for="rime1_24">A、都没有</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime2_24" value="B" {php} if ( isset(session(
+                            'skinquestion24')[1]) && session( 'skinquestion24')[1]=='B' ) { {/php} checked {php} } {/php} name="skinquestion24[1]">
+                        <label class="checkbox" for="rime2_24">B、水光针</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime3_24" value="C" {php} if ( isset(session(
+                            'skinquestion24')[2]) && session( 'skinquestion24')[2]=='C' ) { {/php} checked {php} } {/php} name="skinquestion24[2]">
+                        <label class="checkbox" for="rime3_24">C、玻尿酸</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime4_24" value="D" {php} if ( isset(session(
+                            'skinquestion24')[3]) && session( 'skinquestion24')[3]=='D' ) { {/php} checked {php} } {/php} name="skinquestion24[3]">
+                        <label class="checkbox" for="rime4_24">D、肉毒杆菌</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime5_24" value="E" {php} if ( isset(session(
+                            'skinquestion24')[4]) && session( 'skinquestion24')[4]=='E' ) { {/php} checked {php} } {/php} name="skinquestion24[4]">
+                        <label class="checkbox" for="rime5_24">E、电波拉皮</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime3_24_2" value="F" {php} if ( isset(session(
+                            'skinquestion24')[5]) && session( 'skinquestion24')[5]=='F' ) { {/php} checked {php} } {/php} name="skinquestion24[5]">
+                        <label class="checkbox" for="rime3_24_2">F、埋线</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime4_24_2" value="G" {php} if ( isset(session(
+                            'skinquestion24')[6]) && session( 'skinquestion24')[6]=='G' ) { {/php} checked {php} } {/php} name="skinquestion24[6]">
+                        <label class="checkbox" for="rime4_24_2">G、隆鼻/割双眼皮/削骨</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime5_24_2" value="H" {php} if ( isset(session(
+                            'skinquestion24')[7]) && session( 'skinquestion24')[7]=='H' ) { {/php} checked {php} } {/php} name="skinquestion24[7]">
+                        <label class="checkbox" for="rime5_24_2">H、激光/射频/脉冲光/超声刀/点阵激光</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pages">
+                <a href="{:url('/member/usurvey/pagepc1')}" class="prev">上一页</a>
+                <p class="page_num">
+                    <span class="page">2</span>/
+                    <span class="total_pages">4</span>
+                </p>
+                <a href="javascript:void(0);"  id="next_question" class="pagination">下一页</a>
+            </div>
+        </form>
+    </div>
+    <div class="bg_fix"></div>
+</body>
+<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+<script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+<script>
+    $(function () {
+        $("form").submit(function () {
+            var self = $(this);
+            $.post(self.attr("action"), self.serialize(), success, "json");
+            return false;
+
+            function success(data) {
+                if (data.code) {
+                    //                    var d = dialog({
+                    //                        //icon: 'succeed',
+                    //                        title: '消息',
+                    //                        content: data.msg,
+                    //                        lock: true
+                    //                    });
+                    //                    d.show();
+                    //                    setTimeout(function () {
+                    //                        window.location.href = data.url;
+                    //                        d.close().remove();
+                    //                    }, 2000);
+
+                    window.location.href = data.url;
+                } else {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '错误',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                    }, 3000);
+                }
+            }
+        });
+
+        $("#next_question").click(function () {
+            $('form').submit();
+        });
+    });
+
+
+
+    $(function () {
+        $("input[name='skinquestion3_1']+label").click(function () {
+            var vv = $(this).prev().val();
+
+            if ($("input[name='skinquestion3_2'][value=" + vv + "]").attr('checked') == false) {
+                $("input[name='skinquestion3_2'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_2'][value=" + vv + "]").attr('disabled', true);
+            }
+            if ($("input[name='skinquestion3_3'][value=" + vv + "]").attr('checked') == false) {
+                $("input[name='skinquestion3_3'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_3'][value=" + vv + "]").attr('disabled', true);
+            }
+
+            // $("input[name='skinquestion3_3'][value="+vv+"]").prop("checked",false);
+            // $("input[name='skinquestion3_3'][value="+vv+"]").attr('disabled',true);          
+        });
+
+    });
+
+    $(function () {
+        $("input[name='skinquestion3_1']+label").click(function () {
+            var vv = $(this).prev().val();
+            var vv2 = $("input[name='skinquestion3_2']:checked").val();
+            var vv3 = $("input[name='skinquestion3_3']:checked").val();
+
+            if (vv == vv2 || vv == vv3) {
+                $(this).prev().prop("checked", false);
+                $(this).prev().attr('disabled', true);
+            }
+
+            if ($("input[name='skinquestion3_2']:checked").val() != vv) {
+                $("input[name='skinquestion3_2'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_2'][value=" + vv + "]").attr('disabled', true);
+                //$("input[name='skinquestion3_2'][value!="+vv+"]").prop("checked",true);
+                $("input[name='skinquestion3_2'][value!=" + vv + "]").attr('disabled', false);
+            }
+            if ($("input[name='skinquestion3_3']:checked").val() != vv) {
+                $("input[name='skinquestion3_3'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_3'][value=" + vv + "]").attr('disabled', true);
+                //$("input[name='skinquestion3_3'][value!="+vv+"]").prop("checked",true);
+                $("input[name='skinquestion3_3'][value!=" + vv + "]").attr('disabled', false);
+            }
+
+            // $("input[name='skinquestion3_3'][value="+vv+"]").prop("checked",false);
+            // $("input[name='skinquestion3_3'][value="+vv+"]").attr('disabled',true);
+        });
+
+    });
+
+    $(function () {
+        $("input[name='skinquestion3_2']+label").click(function () {
+            var vv = $(this).prev().val();
+            var vv1 = $("input[name='skinquestion3_1']:checked").val();
+            var vv3 = $("input[name='skinquestion3_3']:checked").val();
+
+            if (vv == vv1 || vv == vv3) {
+                $(this).prev().prop("checked", false);
+                $(this).prev().attr('disabled', true);
+            }
+
+            if ($("input[name='skinquestion3_1']:checked").val() != vv) {
+                $("input[name='skinquestion3_1'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_1'][value=" + vv + "]").attr('disabled', true);
+                //$("input[name='skinquestion3_1'][value!="+vv+"]").prop("checked",true);
+                $("input[name='skinquestion3_1'][value!=" + vv + "]").attr('disabled', false);
+            }
+
+            if ($("input[name='skinquestion3_3']:checked").val() != vv) {
+                $("input[name='skinquestion3_3'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_3'][value=" + vv + "]").attr('disabled', true);
+                //$("input[name='skinquestion3_3'][value!="+vv+"]").prop("checked",true);
+                $("input[name='skinquestion3_3'][value!=" + vv + "]").attr('disabled', false);
+            }
+
+
+            // $("input[name='skinquestion3_1'][value="+vv+"]").prop("checked",false);
+            // $("input[name='skinquestion3_1'][value="+vv+"]").attr('disabled',true);
+            // $("input[name='skinquestion3_3'][value="+vv+"]").prop("checked",false);
+            // $("input[name='skinquestion3_3'][value="+vv+"]").attr('disabled',true);
+        });
+
+    });
+
+    $(function () {
+        $("input[name='skinquestion3_3']+label").click(function () {
+            var vv = $(this).prev().val();
+            var vv2 = $("input[name='skinquestion3_2']:checked").val();
+            var vv1 = $("input[name='skinquestion3_1']:checked").val();
+
+            if (vv == vv2 || vv == vv1) {
+                $(this).prev().prop("checked", false);
+                $(this).prev().attr('disabled', true);
+            }
+
+            if ($("input[name='skinquestion3_2']:checked").val() != vv) {
+                $("input[name='skinquestion3_2'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_2'][value=" + vv + "]").attr('disabled', true);
+                //$("input[name='skinquestion3_2'][value!="+vv+"]").prop("checked",true);
+                $("input[name='skinquestion3_2'][value!=" + vv + "]").attr('disabled', false);
+            }
+
+            if ($("input[name='skinquestion3_1']:checked").val() != vv) {
+                $("input[name='skinquestion3_1'][value=" + vv + "]").prop("checked", false);
+                $("input[name='skinquestion3_1'][value=" + vv + "]").attr('disabled', true);
+                //$("input[name='skinquestion3_1'][value!="+vv+"]").prop("checked",true);
+                $("input[name='skinquestion3_1'][value!=" + vv + "]").attr('disabled', false);
+            }
+
+            // $("input[name='skinquestion3_1'][value="+vv+"]").prop("checked",false);
+            // $("input[name='skinquestion3_1'][value="+vv+"]").attr('disabled',true);
+            // $("input[name='skinquestion3_2'][value="+vv+"]").prop("checked",false);
+            // $("input[name='skinquestion3_2'][value="+vv+"]").attr('disabled',true);
+        });
+
+    });
+</script>
+
+</html>

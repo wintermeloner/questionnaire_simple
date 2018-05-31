@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNISKIN</title>
+    <meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+    <meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://static.inertiabiotech.com/uniskin/css-new/mui.css">
+    <link rel="stylesheet" type="text/css" href="https://static.inertiabiotech.com/uniskin/css-new/global.css">
+    <!-- <link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css-new/questionnaire.css"> -->
+    <link rel="stylesheet" href="./mobile.css" />
+    <link rel="stylesheet" href="./ques_face.css">
+    <script type="text/javascript" src="https://static.inertiabiotech.com/uniskin/js/zepto.js"></script>
+    <script type="text/javascript" src="https://static.inertiabiotech.com/uniskin/js/mui.min.js"></script>
+    <script type="text/javascript" src="https://static.inertiabiotech.com/uniskin/js/mobile.js"></script>
+    <script type="text/javascript" src="https://static.inertiabiotech.com/uniskin/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://static.inertiabiotech.com/uniskin/js/jquery.unveil.js"></script>
+    <script type="text/javascript" src="https://static.inertiabiotech.com/uniskin/js/wxapi.js?v=0120"></script>
+</head>
+
+<body class="mui-ios mui-ios-9 mui-ios-9-1">
+
+    <div id="page" class="articleBg face_1">
+        <form id="myform_1" name="myform" action="{:url('/member/usurvey/face/')}" method="post">
+            <div class="ques_bg">
+                <div class="mui-content">
+
+                    <h2>皮肤状态自我评定</h2>
+
+                    <div class="subject-box  facelast">
+                        <div class="subject-bg">
+                            <div class="subject-wrap">
+                                <div class="subject-con">
+                                    <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-1.png">
+                                    <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-1.png" class="subject-opacity" style="opacity: 0;">
+                                    <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-2.png" class="subject-opacity" style="opacity: 0;">
+                                    <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-3.png" class="subject-opacity" style="opacity: 0;">
+                                    <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-4.png" class="subject-opacity" style="opacity: 0;">
+                                    <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-5.png" class="subject-opacity" style="opacity: 0;">
+                                </div>
+                                <div class="glass-cover"></div>
+                            </div>
+                        </div>
+                        <div id="lineDiv" class="lineDiv">
+                           
+                            <div class="progress_line" id="progress_line">
+                                <div id="minDiv" class="minDiv"></div>
+                            </div>
+                            <div class="info-left">差</div>
+                            <div class="info-right">好</div>
+                            <input type="hidden" value="1" id="paperId" name="page">
+                            <input type="hidden" value="64" id="questionId" name="questionid">
+                            <input type="hidden" value="{php}if ( !empty(session('skinquestion64')) ) {echo session('skinquestion64');} else {echo 0;}{/php}"
+                                id="msg" name="faceval">
+                            <input type="hidden" value="22" id="move">
+                        </div>
+
+                    </div>
+
+
+                   
+
+                </div>
+            </div>
+        </form>
+        <div class="paging">
+
+                <img src="https://static.inertiabiotech.com/uniskin/report-mobile/images/ques_prev.png" class="prev" alt="">
+                <img src="https://static.inertiabiotech.com/uniskin/report-mobile/images/ques_next.png" class="next" alt="">
+
+            <!-- <a href="{:url('/member/usurvey/page1')}">上一项</a>
+            {php}if ( !empty( session('face_question_page11') ) ) { {/php}
+            <a href="{:url('/member/usurvey/page2')}">下一项</a>
+            {php} } else { {/php}
+            <a href="javascript:alert('请按顺序答题！');">下一项</a>
+            {php} } {/php} -->
+        </div>
+    </div>
+    <script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+    <script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+    <script>
+        //  $(function() {
+        //      var rotate_val =225 - $("#msg").val();
+        //      $(".minDiv").css("transform","rotate("+rotate_val+"deg");
+        //      showMesgValue_1($("#msg").val());
+        //   })
+
+        $(function () {
+            $("#myform_1").submit(function () {
+                var self = $(this);
+                $.post(self.attr("action"), self.serialize(), success, "json");
+                return false;
+
+                function success(data) {
+                    if (data.code) {
+                       
+                        window.location.href = data.url;
+                    } else {
+                        var d = dialog({
+                            //icon: 'succeed',
+                            title: '错误',
+                            content: data.msg,
+                            lock: true
+                        });
+                        d.show();
+                        setTimeout(function () {
+                            d.close().remove();
+                        }, 3000);
+                    }
+                }
+            });
+
+            $("#next_question").click(function () {
+                $('#myform_1').submit();
+            });
+            var total_w = $(".progress_line").width();
+
+            move(lineDiv, minDiv, msg, 0, total_w);
+            var paperId = $("#paperId").val();
+            var questionId = $("#questionId").val();
+            var minDiv = document.getElementById('minDiv'); //小方块
+        })
+        function showMesgValue_1(msgValue) {
+            if (msgValue == 0) {
+                $(".face_1 .subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+               
+
+            } else if (msgValue <= 20) {
+                $(".face_1 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.05);
+               
+                if (msgValue == 20) {
+                    $(".face_1 .subject-con").find("img").eq(2).css("opacity", "0");
+                }
+
+            } else if (msgValue > 20 && msgValue <= 40) {
+                $(".face_1 .subject-con").find("img").eq(2).css("opacity", (msgValue - 20) * 0.05);
+              
+                if (msgValue == 40) {
+                    $(".face_1 .subject-con").find("img").eq(3).css("opacity", "0");
+                }
+
+            } else if (msgValue > 40 && msgValue <= 60) {
+                $(".face_1 .subject-con").find("img").eq(3).css("opacity", (msgValue - 40) * 0.05);
+               
+                if (msgValue == 60) {
+                    $(".face_1 .subject-con").find("img").eq(4).css("opacity", "0");
+                }
+            } else if (msgValue > 60 && msgValue <= 80) {
+                $(".face_1 .subject-con").find("img").eq(4).css("opacity", (msgValue - 60) * 0.05);
+              
+
+                if (msgValue == 80) {
+                    $(".face_1 .subject-con").find("img").eq(5).css("opacity", "0");
+                }
+
+            } else if (msgValue > 80 && msgValue <= 100) {
+                $(".face_1 .subject-con").find("img").eq(5).css("opacity", (msgValue - 80) * 0.05);
+               
+            }
+
+        }
+
+
+        function move(progress_line, minDiv, msg, boxWidth, allWidth) {
+            // var lineDiv = document.getElementById('lineDiv'); //长线条
+            var progress_line = document.getElementById('progress_line');
+            var minDiv = document.getElementById('minDiv'); //小方块
+            var msg = document.getElementById("msg");
+            var ifBool = false; //判断鼠标是否按下
+            //鼠标按下方块
+            minDiv.addEventListener("touchstart", function (e) {
+                $(document).bind("touchmove", function (e) {
+                    e.preventDefault();
+                });
+                ifBool = true;
+            });
+            //拖动
+            window.addEventListener("touchmove", function (e) {
+                if (ifBool) {
+                    var x = e.touches[0].clientX; //鼠标横坐标var x
+                    var y = e.touches[0].clientY; //鼠标横坐标var y
+                    var lineDiv_left = getPosition(lineDiv).left; //长线条的横坐标
+                    var progress_left = getPosition(progress_line).left;
+
+                    var minDiv_left = x - lineDiv_left;//小方块相对于父元素（长线条）的left值
+                    if (minDiv_left >= progress_line.offsetWidth - boxWidth) {
+                        minDiv_left = progress_line.offsetWidth - boxWidth;
+                    } else if (minDiv_left < 0) {
+                        minDiv_left = 0;
+                    }
+                    //设置拖动后小方块的left值
+                    msg.value = parseInt((minDiv_left / (progress_line.offsetWidth - boxWidth)) * allWidth);
+                  
+
+
+                    var total_w = $(".progress_line").width();
+                    minDiv.style.left = msg.value +"px";
+                    var total_w = $(".progress_line").width();
+                    var opacity = msg.value;
+                    showMesgValue_1(msg.value/(total_w/100));
+
+                }
+            });
+            //鼠标松开
+            window.addEventListener("touchend", function (e) {
+                ifBool = false;
+                $(document).unbind("touchmove");
+            });
+            //获取元素的绝对位置
+            function getPosition(node) {
+                var left = node.offsetLeft; //获取元素相对于其父元素的left值var left
+                var top = node.offsetTop;
+                current = node.offsetParent; // 取得元素的offsetParent
+                // 一直循环直到根元素
+                while (current != null) {
+                    left += current.offsetLeft;
+                    top += current.offsetTop;
+                    current = current.offsetParent;
+                }
+                return {
+                    "left": left,
+                    "top": top
+                };
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

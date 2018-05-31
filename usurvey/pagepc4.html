@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css-new/questions56.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css/questionnaire-css/questionnaire-third.css">
+<script src="https://static.inertiabiotech.com/timegenes/js/base2.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNISKIN</title>
+    <meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+    <meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform" name="myform" action="{:url('/member/usurvey/pagepc4')}" method="post">
+            <h2>三、生活习惯：</h2>
+            <div class="topic">
+                <div>
+                    <span>38、平均一天花多少时间在室外并暴露在阳光下：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_38" value="A" {php} if ( session( 'skinquestion38')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion38">
+                        <label class="radio" for="smoke1_38">A、不到1小时</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_38" value="B" {php} if ( session( 'skinquestion38')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion38">
+                        <label class="radio" for="smoke2_38">B、1-3小时</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_38" value="C" {php} if ( session( 'skinquestion38')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion38">
+                        <label class="radio" for="smoke3_38">C、3-5小时</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_38" value="D" {php} if ( session( 'skinquestion38')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion38">
+                        <label class="radio" for="smoke4_38">D、5-10小时</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke5_38" value="E" {php} if ( session( 'skinquestion38')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion38">
+                        <label class="radio" for="smoke5_38">E、10小时以上</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>39、 您上下班的交通方式：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_39" value="A" {php} if ( session( 'skinquestion39')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion39">
+                        <label class="radio" for="smoke1_39">A、步行/自行车/电动车</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_39" value="B" {php} if ( session( 'skinquestion39')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion39">
+                        <label class="radio" for="smoke2_39">B、以公交车/地铁为主</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_39" value="C" {php} if ( session( 'skinquestion39')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion39">
+                        <label class="radio" for="smoke3_39">C、私家车/出租车</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_39" value="D" {php} if ( session( 'skinquestion39')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion39">
+                        <label class="radio" for="smoke4_39">D、在家上班</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>40、 请选择一下符合您的工作环境的描述：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_40" value="A" {php} if ( session( 'skinquestion40')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion40">
+                        <label class="radio" for="smoke1_40">A、经常在室内并面对电视或电脑屏幕</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_40" value="B" {php} if ( session( 'skinquestion40')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion40">
+                        <label class="radio" for="smoke2_40">B、经常在室内,并不经常面对屏幕</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_40" value="C" {php} if ( session( 'skinquestion40')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion40">
+                        <label class="radio" for="smoke3_40">C、经常在室外</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_40" value="D" {php} if ( session( 'skinquestion40')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion40">
+                        <label class="radio" for="smoke4_40">D、都不是</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>41、以下哪种符合您的工作状态的描述：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_41" value="A" {php} if ( session( 'skinquestion41')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion41">
+                        <label class="radio" for="smoke1_41">A、长期需要上夜班</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_41" value="B" {php} if ( session( 'skinquestion41')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion41">
+                        <label class="radio" for="smoke2_41">B、经常需要通宵加班</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_41" value="C" {php} if ( session( 'skinquestion41')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion41">
+                        <label class="radio" for="smoke3_41">C、都不是</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>42、以下哪种描述符合您的压力情况：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_42" value="A" {php} if ( session( 'skinquestion42')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion42">
+                        <label class="radio" for="smoke1_42">A、没有生活焦虑感和工作压力 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_42" value="B" {php} if ( session( 'skinquestion42')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion42">
+                        <label class="radio" for="smoke2_42">B、偶尔会有轻微的生活焦虑感和工作压力</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_42" value="C" {php} if ( session( 'skinquestion42')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion42">
+                        <label class="radio" for="smoke3_42">C、目前有较强的生活焦虑感和工作压力</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_42" value="D" {php} if ( session( 'skinquestion42')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion42">
+                        <label class="radio" for="smoke4_42">D、长期有强烈的生活焦虑感和工作压力</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>43、以下哪种描述符合您的睡眠情况:</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_43" value="A" {php} if ( session( 'skinquestion43')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion43">
+                        <label class="radio" for="smoke1_43">A、一般睡眠8小时以上</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_43" value="B" {php} if ( session( 'skinquestion43')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion43">
+                        <label class="radio" for="smoke2_43">B、一般睡眠6-8小时</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_43" value="C" {php} if ( session( 'skinquestion43')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion43">
+                        <label class="radio" for="smoke3_43">C、一般睡眠不足6小时 </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>44、您一般什么时候入睡：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_44" value="A" {php} if ( session( 'skinquestion44')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion44">
+                        <label class="radio" for="smoke1_44">A、10点之前</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_44" value="B" {php} if ( session( 'skinquestion44')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion44">
+                        <label class="radio" for="smoke2_44">B、10-12点</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_44" value="C" {php} if ( session( 'skinquestion44')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion44">
+                        <label class="radio" for="smoke3_44">C、12-1点</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_44" value="D" {php} if ( session( 'skinquestion44')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion44">
+                        <label class="radio" for="smoke4_44">D、1-2点</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise4_44" value="E" {php} if ( session( 'skinquestion44')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion44">
+                        <label class="radio" for="exercise4_44">E、2点之后</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>45、 您一般主要睡觉的方式是：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_45" value="A" {php} if ( session( 'skinquestion45')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion45">
+                        <label class="radio" for="smoke1_45">A、左侧卧 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_45" value="B" {php} if ( session( 'skinquestion45')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion45">
+                        <label class="radio" for="smoke2_45">B、右侧卧</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_45" value="C" {php} if ( session( 'skinquestion45')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion45">
+                        <label class="radio" for="smoke3_45">C、仰卧</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_45" value="D" {php} if ( session( 'skinquestion45')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion45">
+                        <label class="radio" for="smoke4_45">D、趴卧</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise4_45" value="E" {php} if ( session( 'skinquestion45')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion45">
+                        <label class="radio" for="exercise4_45">E、不固定</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>46、过去一个月中您每周的锻炼情况为：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1" value="A" {php} if ( session( 'skinquestion46')=='A' ) { {/php} checked {php}
+                            } {/php} name="skinquestion46">
+                        <label class="radio" for="smoke1">A、不锻炼 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2" value="B" {php} if ( session( 'skinquestion46')=='B' ) { {/php} checked {php}
+                            } {/php} name="skinquestion46">
+                        <label class="radio" for="smoke2">B、一周1-3小时 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3" value="C" {php} if ( session( 'skinquestion46')=='C' ) { {/php} checked {php}
+                            } {/php} name="skinquestion46">
+                        <label class="radio" for="smoke3">C、一周3-5小时</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4" value="D" {php} if ( session( 'skinquestion46')=='D' ) { {/php} checked {php}
+                            } {/php} name="skinquestion46">
+                        <label class="radio" for="smoke4">D、一周5小时以上</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>47、您有托腮的习惯吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_47" value="A" {php} if ( session( 'skinquestion47')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion47">
+                        <label class="radio" for="smoke1_47">A、有左托腮的习惯 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_47" value="B" {php} if ( session( 'skinquestion47')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion47">
+                        <label class="radio" for="smoke2_47">B、有右托腮的习惯 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_47" value="C" {php} if ( session( 'skinquestion47')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion47">
+                        <label class="radio" for="smoke3_47">C、左右托腮都习惯</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_47" value="D" {php} if ( session( 'skinquestion47')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion47">
+                        <label class="radio" for="smoke4_47">D、没有托腮的习惯</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>48、 您经常大笑/皱眉/过多的面部表情吗：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_48" value="A" {php} if ( session( 'skinquestion48')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion48">
+                        <label class="radio" for="smoke1_48">A、经常</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_48" value="B" {php} if ( session( 'skinquestion48')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion48">
+                        <label class="radio" for="smoke2_48">B、不经常</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic">
+                <div>
+                    <span>49、 您的饮食偏好为（可多选）：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="smoke1_49" value="A" {php} if ( isset(session( 'skinquestion49')[0]) && session(
+                            'skinquestion49')[0]=='A' ) { {/php} checked {php} } {/php} name="skinquestion49[0]">
+                        <label class="checkbox" for="smoke1_49">A、经常吃辛辣（1周3次以上）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="smoke2_49" value="B" {php} if ( isset(session( 'skinquestion49')[1]) && session(
+                            'skinquestion49')[1]=='B' ) { {/php} checked {php} } {/php} name="skinquestion49[1]">
+                        <label class="checkbox" for="smoke2_49">B、经常吃蛋糕/冰激凌/奶茶等甜食（1周3次以上）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="smoke3_49" value="C" {php} if ( isset(session( 'skinquestion49')[2]) && session(
+                            'skinquestion49')[2]=='C' ) { {/php} checked {php} } {/php} name="skinquestion49[2]">
+                        <label class="checkbox" for="smoke3_49">C、经常吃油炸食品（1周3次以上）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="smoke4_49" value="D" {php} if ( isset(session( 'skinquestion49')[3]) && session(
+                            'skinquestion49')[3]=='D' ) { {/php} checked {php} } {/php} name="skinquestion49[3]">
+                        <label class="checkbox" for="smoke4_49">D、经常喝酒（1周3次以上）</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="smoke5_49" value="E" {php} if ( isset(session( 'skinquestion49')[4]) && session(
+                            'skinquestion49')[4]=='E' ) { {/php} checked {php} } {/php} name="skinquestion49[4]">
+                        <label class="checkbox" for="smoke5_49">E、素食主义者</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="smoke6_49" value="F" {php} if ( isset(session( 'skinquestion49')[5]) && session(
+                            'skinquestion49')[5]=='F' ) { {/php} checked {php} } {/php} name="skinquestion49[5]">
+                        <label class="checkbox" for="smoke6_49">F、其他</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>50. 吃水果蔬菜的频率：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_50" value="A" {php} if ( session( 'skinquestion50')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion50">
+                        <label class="radio" for="smoke1_50">A、每餐都吃 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_50" value="B" {php} if ( session( 'skinquestion50')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion50">
+                        <label class="radio" for="smoke2_50">B、一天一次</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_50" value="C" {php} if ( session( 'skinquestion50')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion50">
+                        <label class="radio" for="smoke3_50">C、三天一次</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_50" value="D" {php} if ( session( 'skinquestion50')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion50">
+                        <label class="radio" for="smoke4_50">D、 一周一次</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>51. 过去1个月中，蔬菜水果占所有食物的比例：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_51" value="A" {php} if ( session( 'skinquestion51')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion51">
+                        <label class="radio" for="smoke1_51">A、少于或等于1/4</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_51" value="B" {php} if ( session( 'skinquestion51')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion51">
+                        <label class="radio" for="smoke2_51">B、1/4到一半</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_51" value="C" {php} if ( session( 'skinquestion51')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion51">
+                        <label class="radio" for="smoke3_51">C、绝大部分</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic  quest52">
+                <div>
+                    <span>52、 您平均的吸烟频率为：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_52" value="A" {php} if ( session( 'skinquestion52')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion52">
+                        <label class="radio" for="smoke1_52">A、从不吸烟</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_52" value="B" {php} if ( session( 'skinquestion52')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion52">
+                        <label class="radio" for="smoke2_52">B、一天5支左右</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_52" value="C" {php} if ( session( 'skinquestion52')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion52">
+                        <label class="radio" for="smoke3_52">C、一天半包</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_52" value="D" {php} if ( session( 'skinquestion52')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion52">
+                        <label class="radio" for="smoke4_52">D、一天1包以上</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic quest53 ">
+                <div>
+                    <span>53、您的吸烟史有多长：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_53" value="A" {php} if ( session( 'skinquestion53')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion53">
+                        <label class="radio" for="smoke1_53">A、从不吸烟</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_53" value="B" {php} if ( session( 'skinquestion53')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion53">
+                        <label class="radio" for="smoke2_53">B、2年以内</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_53" value="C" {php} if ( session( 'skinquestion53')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion53">
+                        <label class="radio" for="smoke3_53">C、10年以内</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_53" value="D" {php} if ( session( 'skinquestion53')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion53">
+                        <label class="radio" for="smoke4_53">D、10年以上</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>54、您的生理周期是否规律：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_54" value="A" {php} if ( session( 'skinquestion54')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion54">
+                        <label class="radio" for="smoke1_54">A、例假间隔时间超过35天或者小于21天 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_54" value="B" {php} if ( session( 'skinquestion54')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion54">
+                        <label class="radio" for="smoke2_54">B、例假持续时间超过7天或小于3天 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_54" value="C" {php} if ( session( 'skinquestion54')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion54">
+                        <label class="radio" for="smoke3_54">C、已过更年期</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_54" value="D" {php} if ( session( 'skinquestion54')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion54">
+                        <label class="radio" for="smoke4_54">D、由于其他原因没有例假</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke5_54" value="E" {php} if ( session( 'skinquestion54')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion54">
+                        <label class="radio" for="smoke5_54">E、大部分时间例假正常</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic  quest55">
+                <div>
+                    <span>55、您的脱发情况：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke1_55" value="A" {php} if ( session( 'skinquestion55')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion55">
+                        <label class="radio" for="smoke1_55">A、不脱发</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke2_55" value="B" {php} if ( session( 'skinquestion55')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion55">
+                        <label class="radio" for="smoke2_55">B、脱发，但不集中在头前部和头顶 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke3_55" value="C" {php} if ( session( 'skinquestion55')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion55">
+                        <label class="radio" for="smoke3_55">C、脱发，且特别集中在头前部和头顶</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke4_55" value="D" {php} if ( session( 'skinquestion55')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion55">
+                        <label class="radio" for="smoke4_55">D、掉发不严重，但是头发少</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke5_55" value="E" {php} if ( session( 'skinquestion55')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion55">
+                        <label class="radio" for="smoke5_55">E、不确定</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic  quest56">
+                <div>
+                    <span>56、您脱发情况是伴随以下情况吗：（55题不是A）</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="smoke56_1" value="A" {php} if ( session( 'skinquestion56')=='A' ) { {/php} checked {php}
+                            } {/php} name="skinquestion56">
+                        <label class="radio" for="smoke56_1">A、明显的体重变化</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke56_2" value="B" {php} if ( session( 'skinquestion56')=='B' ) { {/php} checked {php}
+                            } {/php} name="skinquestion56">
+                        <label class="radio" for="smoke56_2">B、工作和生活压力 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke56_3" value="C" {php} if ( session( 'skinquestion56')=='C' ) { {/php} checked {php}
+                            } {/php} name="skinquestion56">
+                        <label class="radio" for="smoke56_3">C、其他部位的毛发变化（如唇毛）</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="smoke56_4" value="D" {php} if ( session( 'skinquestion56')=='D' ) { {/php} checked {php}
+                            } {/php} name="skinquestion56">
+                        <label class="radio" for="smoke56_4">D、都不是</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pages">
+                <a href="{:url('/member/usurvey/pagepc3')}">上一页</a>
+                <p class="page_num">
+                    <span class="page">4</span>/
+                    <span class="total_pages">4</span>
+                </p>
+                <a href="javascript:void(0);" id="next_question" class="pagination">完成</a>
+            </div>
+        </form>
+    </div>
+    <div class="bg_fix"></div>
+</body>
+<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+<script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+<script>
+    $(function () {
+        $("form").submit(function () {
+            var self = $(this);
+            $.post(self.attr("action"), self.serialize(), success, "json");
+            return false;
+
+            function success(data) {
+                if (data.code) {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '消息',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        window.location.href = data.url;
+                        d.close().remove();
+                    }, 2000);
+                } else {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '错误',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                    }, 3000);
+                }
+            }
+        });
+
+        $("#next_question").click(function () {
+            $('form').submit();
+        });
+    });
+
+    $(function () {
+        $(".quest52  label").click(function () {
+
+            var v = $(this).prev().val();
+            if (v != "A") {
+
+                $('.quest53 label ').css({
+
+                    color: "#191919"
+                });
+                $("input[name='skinquestion53'] ").attr("disabled", false);
+            } else {
+                $('.quest53  label').css({
+                    color: "#dfdada"
+                });
+                $("input[name='skinquestion53']").prop("checked", false);
+                // $("input[name='skinquestion34'] [value=B]").prop("checked",false);
+                // $("#special label").unbind("click" );
+                $("input[name='skinquestion53'] ").attr("disabled", true);
+            }
+
+        });
+    });
+
+    $(function(){
+        $(".quest55  label").click(function(){
+
+            var v = $(this).prev().val();
+            if (v != "A" ){
+
+                $('.quest56 label ').css({
+
+                    color:"#191919"
+                });
+                $("input[name='skinquestion56'] ").attr("disabled",false);
+            }else{
+                $('.quest56 label').css({
+                    color:"#dfdada"
+                });
+                $("input[name='skinquestion56']").prop("checked",false);
+                // $("input[name='skinquestion34'] [value=B]").prop("checked",false);
+                // $("#special label").unbind("click" );
+                $("input[name='skinquestion56'] ").attr("disabled",true);
+            }
+
+        });
+
+    });
+</script>
+
+</html>

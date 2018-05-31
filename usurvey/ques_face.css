@@ -1,0 +1,186 @@
+html{
+	font-size: 100px;
+}
+.zhezhao {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    /*display: none;*/
+    /* z-index: 1000; */
+}
+ .cont{
+	width: 4rem;
+	height: 6rem;
+	padding: 0.5rem;
+	background:#fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+ .cont  p{
+ 	font-size: 0.24rem;
+ 	line-height: 2;
+ }
+
+ .cont .go{
+  width:2rem;
+  height:0.5rem;
+  line-height: 0.5rem;
+  
+  margin: 0.2rem auto  0;
+  margin-left:0;
+  /*margin-right: 66px;*/
+ 
+  background: #000;
+  /*border: 2px solid #000; */
+  text-align: center;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translate(-51%);
+}
+.go  a{
+  font-size:0.24rem;
+  color: #fff;
+} 
+
+
+h1{
+	font-size: 0.3rem;
+	text-align: center;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	background: #000;
+	color: #fff;
+}
+
+.bg{
+	background: url(https://static.inertiabiotech.com/uniskin/images-new/unibg.png) no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-position: 50%;
+
+}
+h2{
+	font-size: 0.2rem;
+	text-align: center;
+	margin: 0.3rem auto;
+	width: 5.2rem;
+
+}
+
+.message  {
+	/*width: 4rem;
+	margin: 0  auto;*/
+
+	text-align: center;
+}
+.message >div {
+	margin-top: 0.3rem;
+}
+
+.message  input{
+	width:3.7rem;
+	height: 0.4rem;
+	padding-left: 0.1rem;
+	margin-left: 0.2rem;
+	
+}
+input[type="radio"]{
+	margin-right: 0.1rem;
+	vertical-align: middle;
+}
+input , select{
+	border: 1px solid #000;
+}
+.message .cm input{
+	margin-left: 0.24rem;
+}
+.message .cm input ,.message .kg input {
+	width: 3.3rem;
+	margin-right: 0.2rem;
+}
+.city{
+	margin-top: 0.3rem;
+	text-align: center;
+}
+.city select{
+	height: 0.4rem;
+	width: 3rem;
+	margin-top: 0.3rem;
+
+}
+.produce{
+	margin-top: 0.3rem;
+	margin-bottom: 2.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+}
+.produce>div{
+	height: 0.5rem;
+}
+
+.mui-content  h2{
+	font-size:1rem;
+	text-align: center;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	background: #000;
+	color: #fff;
+	width: 100%;
+	margin-top: 0;
+	display: none;
+}
+
+
+
+/* .paging{
+
+	width: 100%;
+	height: 0.98rem;
+	line-height: 0.98rem;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+}
+
+.paging  a{
+  
+    color:#000;
+	display: inline-block;
+	letter-spacing: 2px;
+	font-size: 0.3rem;
+} */
+
+.paging {
+    position: absolute;
+    /* z-index:999; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.76rem;
+    /* background-color: blueviolet; */
+}
+.paging .prev{
+    position:absolute;
+    left:10%;
+    top:50%;
+    transform:translateY(-50%);
+    height:50%;
+}
+.paging .next{
+    position:absolute;
+    right:10%;
+    top:50%;
+    transform:translateY(-50%);
+    height:50%;
+}

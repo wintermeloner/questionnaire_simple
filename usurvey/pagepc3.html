@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css-new/questions56.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css/questionnaire-css/questionnaire-second.css">
+<script src="https://static.inertiabiotech.com/timegenes/js/base2.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNISKIN</title>
+    <meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+    <meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform" name="myform" action="{:url('/member/usurvey/pagepc3')}" method="post">
+            <h2>二、护肤习惯：</h2>
+            <div class="topic  quest25">
+                <div>
+                    <span>25. 您使用护肤品的频率是：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="rime1_25" value="A" {php} if ( session( 'skinquestion25')=='A' ) { {/php} checked {php}
+                            } {/php} name="skinquestion25">
+                        <label class="radio" for="rime1_25">A、每天护肤 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="rime2_25" value="B" {php} if ( session( 'skinquestion25')=='B' ) { {/php} checked {php}
+                            } {/php} name="skinquestion25">
+                        <label class="radio" for="rime2_25">B、一周平均5天护肤</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="rime3_25" value="C" {php} if ( session( 'skinquestion25')=='C' ) { {/php} checked {php}
+                            } {/php} name="skinquestion25">
+                        <label class="radio" for="rime3_25">C、偶尔会护肤 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="rime4_25" value="D" {php} if ( session( 'skinquestion25')=='D' ) { {/php} checked {php}
+                            } {/php} name="skinquestion25">
+                        <label class="radio" for="rime4_25">D、从不护肤</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic  " id="special">
+                <div>
+                    <span>26、您经常使用的护肤产品是（可多选）：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime1_26" value="A" {php} if ( isset(session( 'skinquestion26')[0]) && session(
+                            'skinquestion26')[0]=='A' ) { {/php} checked {php} } {/php} name="skinquestion26[0]">
+                        <label class="checkbox" for="rime1_26">A、保湿类产品</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime2_26" value="B" {php} if ( isset(session( 'skinquestion26')[1]) && session(
+                            'skinquestion26')[1]=='B' ) { {/php} checked {php} } {/php} name="skinquestion26[1]">
+                        <label class="checkbox" for="rime2_26">B、舒缓抗敏类产品</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime3_26" value="C" {php} if ( isset(session( 'skinquestion26')[2]) && session(
+                            'skinquestion26')[2]=='C' ) { {/php} checked {php} } {/php} name="skinquestion26[2]">
+                        <label class="checkbox" for="rime3_26">C、美白类产品</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime4_26" value="D" {php} if ( isset(session( 'skinquestion26')[3]) && session(
+                            'skinquestion26')[3]=='D' ) { {/php} checked {php} } {/php} name="skinquestion26[3]">
+                        <label class="checkbox" for="rime4_26">D、祛斑祛痘印产品</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime2_26_2" value="E" {php} if ( isset(session( 'skinquestion26')[4]) && session(
+                            'skinquestion26')[4]=='E' ) { {/php} checked {php} } {/php} name="skinquestion26[4]">
+                        <label class="checkbox" for="rime2_26_2">E、祛痘产品</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime3_26_2" value="F" {php} if ( isset(session( 'skinquestion26')[5]) && session(
+                            'skinquestion26')[5]=='F' ) { {/php} checked {php} } {/php} name="skinquestion26[5]">
+                        <label class="checkbox" for="rime3_26_2">F、去角质产品</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="rime4_26_2" value="G" {php} if ( isset(session( 'skinquestion26')[6]) && session(
+                            'skinquestion26')[6]=='G' ) { {/php} checked {php} } {/php} name="skinquestion26[6]">
+                        <label class="checkbox" for="rime4_26_2">G、抗衰类产品</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic" id="special">
+                <div>
+                    <span>27. 请按顺序列出您的护肤产品使用习惯：</span>
+                </div>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A、洗面奶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; B、水&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    C、乳液&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D、霜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E、精华&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    F、眼霜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G、睡眠面膜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H、贴片面膜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <span>早上（秋冬）：
+                    <input type="text" style="border: none;border-bottom: 1px solid #dfdada;margin-left: 5px;width: 200px;" class="dd" value="{php} if ( session('skinquestion27_1') != '' ) { echo session('skinquestion27_1'); }{/php}"
+                        name="skinquestion27_1">
+                </span>
+                <br>
+                <span>晚上（秋冬）：
+                    <input type="text" style="border: none;border-bottom: 1px solid #dfdada;margin-left: 5px;width: 200px;" class="dd" value="{php} if ( session('skinquestion27_2') != '' ) { echo session('skinquestion27_2'); }{/php}"
+                        name="skinquestion27_2">
+                </span>
+            </div>
+
+            <div class="topic  quest28" id="special">
+                <div>
+                    <span>28、换季会换护肤步骤吗？</span>
+                </div>
+                <ul>
+                    <li style="display: inline-block;*zoom:1;*display: inline;">
+                        <input type="radio" class="radio" id="family1_28" value="A" {php} if ( session( 'skinquestion28')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion28">
+                        <label class="radio" id="28a" for="family1_28">A、会</label>
+                    </li>
+                    <li style="display: inline-block;*zoom:1;*display: inline;">
+                        <input type="radio" class="radio" id="family2_28" value="B" {php} if ( session( 'skinquestion28')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion28">
+                        <label class="radio" id="28b" for="family2_28">B、不会</label>
+                    </li>
+                </ul>
+                <span>早上（春夏）：
+                    <input type="text" style="border: none;border-bottom: 1px solid #666666;margin-left: 5px;width: 200px;" value="{php} if ( session('skinquestion28_1') != '' ) { echo session('skinquestion28_1'); }{/php}"
+                        name="skinquestion28_1" class="dd">
+                </span>
+                <br>
+                <span>晚上（春夏）：
+                    <input type="text" style="border: none;border-bottom: 1px solid #666666;margin-left: 5px;width: 200px;" class="dd" value="{php} if ( session('skinquestion28_2') != '' ) { echo session('skinquestion28_2'); }{/php}"
+                        name="skinquestion28_2">
+                </span>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>29、 您使用去角质产品的频率：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="family1_29" value="A" {php} if ( session( 'skinquestion29')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion29">
+                        <label class="radio" for="family1_29">A、从不使用</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family2_29" value="B" {php} if ( session( 'skinquestion29')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion29">
+                        <label class="radio" for="family2_29">B、每月使用一次 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family3_29" value="C" {php} if ( session( 'skinquestion29')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion29">
+                        <label class="radio" for="family3_29">C、每月使用2-3次</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family4_29" value="D" {php} if ( session( 'skinquestion29')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion29">
+                        <label class="radio" for="family4_29">D、每周使用1次</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family5_29" value="E" {php} if ( session( 'skinquestion29')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion29">
+                        <label class="radio" for="family5_29">E、每周使用2次及以上</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>30、您使用面膜的频率：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="family1_30" value="A" {php} if ( session( 'skinquestion30')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion30">
+                        <label class="radio" for="family1_30">A、从不使用</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family2_30" value="B" {php} if ( session( 'skinquestion30')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion30">
+                        <label class="radio" for="family2_30">B、每月使用一次 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family3_30" value="C" {php} if ( session( 'skinquestion30')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion30">
+                        <label class="radio" for="family3_30">C、每月使用2-4次 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family4_30" value="D" {php} if ( session( 'skinquestion30')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion30">
+                        <label class="radio" for="family4_30">D、每周使用2-4次</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family5_30" value="E" {php} if ( session( 'skinquestion30')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion30">
+                        <label class="radio" for="family5_30">E、几乎天天使用</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>31、您对洗面奶的偏好（可多选）：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="family1_31" value="A" {php} if ( !empty(session( 'skinquestion31')[0]) && session(
+                            'skinquestion31')[0]=='A' ) { {/php} checked {php} } {/php} name="skinquestion31[0]">
+                        <label class="checkbox" for="family1_31">A、偏好温和的洗面奶</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="family2_31" value="B" {php} if ( !empty(session( 'skinquestion31')[1]) && session(
+                            'skinquestion31')[1]=='B' ) { {/php} checked {php} } {/php} name="skinquestion31[1]">
+                        <label class="checkbox" for="family2_31">B、偏好清洁力强的洗面奶 </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="family3_31" value="C" {php} if ( !empty(session( 'skinquestion31')[2]) && session(
+                            'skinquestion31')[2]=='C' ) { {/php} checked {php} } {/php} name="skinquestion31[2]">
+                        <label class="checkbox" for="family3_31">C、不用洗面奶 </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="family4_31" value="D" {php} if ( !empty(session( 'skinquestion31')[3]) && session(
+                            'skinquestion31')[3]=='D' ) { {/php} checked {php} } {/php} name="skinquestion31[3]">
+                        <label class="checkbox" for="family4_31">D、每周使用2-4次</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkbox" id="family5_31" value="E" {php} if ( !empty(session( 'skinquestion31')[4]) && session(
+                            'skinquestion31')[4]=='E' ) { {/php} checked {php} } {/php} name="skinquestion31[4]">
+                        <label class="checkbox" for="family5_31">E、几乎天天使用</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>32、您化妆的频率是：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="family1" value="A" {php} if ( session( 'skinquestion32')=='A' ) { {/php} checked {php}
+                            } {/php} name="skinquestion32">
+                        <label class="radio" for="family1">A、每天化妆</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family2" value="B" {php} if ( session( 'skinquestion32')=='B' ) { {/php} checked {php}
+                            } {/php} name="skinquestion32">
+                        <label class="radio" for="family2">B、一周平均5天化妆 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family3" value="C" {php} if ( session( 'skinquestion32')=='C' ) { {/php} checked {php}
+                            } {/php} name="skinquestion32">
+                        <label class="radio" for="family3">C、偶尔会化妆 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="family4" value="D" {php} if ( session( 'skinquestion32')=='D' ) { {/php} checked {php}
+                            } {/php} name="skinquestion32">
+                        <label class="radio" for="family4">D、从不化妆</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="topic  quest33">
+                <div>
+                    <span>33、如果您化妆，您常使用什么卸妆产品：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="exercise1_33" value="A" {php} if ( session( 'skinquestion33')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion33">
+                        <label class="radio" for="exercise1_33" id='33a'>A、直接用洗面奶</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise2_33" value="B" {php} if ( session( 'skinquestion33')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion33">
+                        <label class="radio" for="exercise2_33">B、卸妆乳或者卸妆液 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise3_33" value="C" {php} if ( session( 'skinquestion33')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion33">
+                        <label class="radio" for="exercise3_33">C、卸妆油或者卸妆膏</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise4_33" value="D" {php} if ( session( 'skinquestion33')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion33">
+                        <label class="radio" for="exercise4_33">D、卸妆巾</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise5_33" value="E" {php} if ( session( 'skinquestion33')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion33">
+                        <label class="radio" for="exercise5_33" id='33e'>E、不化妆</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic  quest34" id="special">
+                <div>
+                    <span>34、您在使用卸妆产品后还会使用洗面奶二次清洁吗：(如果上题不是A E)</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="exercise1_34" value="A" {php} if ( session( 'skinquestion34')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion34">
+                        <label class="radio" for="exercise1_34">A、使用</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise2_34" value="B" {php} if ( session( 'skinquestion34')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion34">
+                        <label class="radio" for="exercise2_34">B、不使用</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>35、您平时是否注意防晒：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="exercise1_35" value="A" {php} if ( session( 'skinquestion35')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion35">
+                        <label class="radio" for="exercise1_35">A、平时从不防晒</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise2_35" value="B" {php} if ( session( 'skinquestion35')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion35">
+                        <label class="radio" for="exercise2_35">B、夏天会涂防晒霜</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise3_35" value="C" {php} if ( session( 'skinquestion35')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion35">
+                        <label class="radio" for="exercise3_35">C、夏天会撑太阳伞</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise4_35" value="D" {php} if ( session( 'skinquestion35')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion35">
+                        <label class="radio" for="exercise4_35">D、夏天会涂防晒霜和撑太阳伞 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise5_35" value="E" {php} if ( session( 'skinquestion35')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion35">
+                        <label class="radio" for="exercise5_35">E、冬天都会涂防晒霜或撑太阳伞</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>36、您只涂抹防晒霜（不化妆），会使用什么卸妆产品：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="exercise1_36" value="A" {php} if ( session( 'skinquestion36')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion36">
+                        <label class="radio" for="exercise1_36">A、直接用洗面奶 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise2_36" value="B" {php} if ( session( 'skinquestion36')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion36">
+                        <label class="radio" for="exercise2_36">B、卸妆乳或者卸妆液</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise3_36" value="C" {php} if ( session( 'skinquestion36')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion36">
+                        <label class="radio" for="exercise3_36">C、卸妆油或者卸妆膏</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise4_36" value="D" {php} if ( session( 'skinquestion36')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion36">
+                        <label class="radio" for="exercise4_36">D、卸妆巾 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise5_36" value="E" {php} if ( session( 'skinquestion36')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion36">
+                        <label class="radio" for="exercise5_36">E、不涂防晒霜</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="topic">
+                <div>
+                    <span>37、您对护肤品香味的喜好：</span>
+                </div>
+                <ul>
+                    <li>
+                        <input type="radio" class="radio" id="exercise1_37" value="A" {php} if ( session( 'skinquestion37')=='A' ) { {/php} checked
+                            {php} } {/php} name="skinquestion37">
+                        <label class="radio" for="exercise1_37">A、无香味 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise2_37" value="B" {php} if ( session( 'skinquestion37')=='B' ) { {/php} checked
+                            {php} } {/php} name="skinquestion37">
+                        <label class="radio" for="exercise2_37">B、花香型</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise3_37" value="C" {php} if ( session( 'skinquestion37')=='C' ) { {/php} checked
+                            {php} } {/php} name="skinquestion37">
+                        <label class="radio" for="exercise3_37">C、果香型</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise4_37" value="D" {php} if ( session( 'skinquestion37')=='D' ) { {/php} checked
+                            {php} } {/php} name="skinquestion37">
+                        <label class="radio" for="exercise4_37">D、木香型 </label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" id="exercise5_37" value="E" {php} if ( session( 'skinquestion37')=='E' ) { {/php} checked
+                            {php} } {/php} name="skinquestion37">
+                        <label class="radio" for="exercise5_37">E、其他香型</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pages">
+                <a href="{:url('/member/usurvey/pagepc2')}" class="prev">上一页</a>
+                <p class="page_num">
+                    <span class="page">3</span>/
+                    <span class="total_pages">4</span>
+                </p>
+                <a href="javascript:void(0);" id="next_question" class="pagination">下一页</a>
+            </div>
+        </form>
+    </div>
+    <div class="bg_fix"></div>
+</body>
+<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+<script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+<script>
+    $(function () {
+        $("form").submit(function () {
+            var self = $(this);
+            $.post(self.attr("action"), self.serialize(), success, "json");
+            return false;
+
+            function success(data) {
+                if (data.code) {
+                    //                    var d = dialog({
+                    //                        //icon: 'succeed',
+                    //                        title: '消息',
+                    //                        content: data.msg,
+                    //                        lock: true
+                    //                    });
+                    //                    d.show();
+                    //                    setTimeout(function () {
+                    //                        window.location.href = data.url;
+                    //                        d.close().remove();
+                    //                    }, 2000);
+
+                    window.location.href = data.url;
+                } else {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '错误',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                    }, 3000);
+                }
+            }
+        });
+
+        $("#next_question").click(function () {
+            $('form').submit();
+        });
+    });
+
+
+    $(function () {
+        $(".quest25  label").click(function () {
+
+            var v = $(this).prev().val();
+            if (v != "D") {
+
+                $('#special > span').css({
+
+                    color: "#191919"
+                });
+                $('#special .dd').css(
+
+                    "border-bottom", "1px  solid #191919"
+
+                );
+                $('#special label ').css({
+
+                    color: "#191919"
+                });
+                // $("#special  .checkbox").prop("checked",true);
+                $("#special  .checkbox ").attr("disabled", false);
+                $("#special .dd").removeAttr("readonly");
+                // $("#special  .radio").prop("checked",true);
+                $("#special  .radio").attr("disabled", false);
+            } else {
+                $('#special >span').css({
+                    color: "#dfdada"
+                });
+                $('#special .dd').css(
+
+                    "border-bottom", "1px  solid #dfdada "
+                );
+                $('#special .dd').attr(
+
+                    "readonly", "readonly"
+
+                );
+                $('#special label').css({
+                    color: "#dfdada"
+                });
+                $("#special  .checkbox").prop("checked", false);
+                $("#special  .checkbox ").attr("disabled", true);
+                $("#special  .radio").prop("checked", false);
+                $("#special  .radio").attr("disabled", true);
+            }
+
+        });
+    });
+
+    $(function () {
+        $(".quest28  label").click(function () {
+
+            var v = $(this).prev().val();
+            if (v == "A") {
+
+                $('.quest28  > span ').css({
+
+                    color: "#191919"
+                });
+                $('.quest28  .dd').css(
+
+                    "border-bottom", "1px  solid #191919"
+
+                );
+                // $("input[name='skinquestion28'] ").attr("disabled",false);
+                $(" .quest28  .dd").removeAttr("readonly");
+            } else {
+                $('.quest28   >span').css({
+                    color: "#dfdada"
+                });
+                $('.quest28   .dd').css(
+
+                    "border-bottom", "1px  solid #dfdada "
+
+                );
+                $('.quest28   .dd').attr(
+
+                    "readonly", "readonly"
+
+                );
+            }
+
+        });
+
+    });
+    $(function () {
+        $(".quest33  label").click(function () {
+
+            var v = $(this).prev().val();
+            if (v == "B" || v == "C" || v == "D") {
+                $('.quest34 label').css({
+                    color: "#191919"
+                });
+                $("input[name='skinquestion34'] ").attr("disabled", false);
+            } else {
+                $('.quest34  label').css({
+                    color: "#dfdada"
+                });
+                $("input[name='skinquestion34']").prop("checked", false);
+                // $("input[name='skinquestion34'] [value=B]").prop("checked",false);
+                // $("#special label").unbind("click" );
+                $("input[name='skinquestion34'] ").attr("disabled", true);
+            }
+
+        });
+
+    });
+</script>
+
+</html>

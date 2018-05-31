@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/timegenes/css/reset.css">
+<link rel="stylesheet" type="text/css" href="https://static.inertiabiotech.com/uniskin/css-new/mobile.css">
+<link rel="stylesheet" href="https://static.inertiabiotech.com/uniskin/css/questionnaire-css/questionnaire-main.css">
+<link href="https://static.inertiabiotech.com/uniskin/css-new/font-awesome.min.css" rel="stylesheet">
+<script src="https://static.inertiabiotech.com/timegenes/js/base2.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UNISKIN</title>
+    <meta name="keywords" content="uniskin, 优时颜, 基因护肤, 基因检测，皮肤检测，皮肤基因检测, 个性化护肤，精准护肤，护肤，皮肤基因, 护肤品，懿奈">
+    <meta name="description" content="UNISKIN是一个颠覆当前情感式护肤的新锐科技护肤品牌，倡导以极致的科学逻辑对待护肤。从皮肤基因、表型等方面着手，全方位整合皮肤多组学数据，为您匹配最精准的护肤方案。">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 头部表单 -->
+        <form id="myform" name="myform" action="{:url('/member/usurvey/pagepc1')}" method="post">
+            <h3>皮肤问题问卷调查</h3>
+            <p class="title">此问卷是为了帮助我们更好的了解您的肌肤和生活状态，一遍更好的给您推荐合适的护肤方案。</p>
+            <div class="main_form">
+                <div class="personal_info">
+                    <div>
+                        <label> 年龄:</label>
+                        <input type="text" name="skinquestion60" value="{php}echo session('skinquestion60');{/php}">
+                    </div>
+                    <div>
+                        <label> 民族:</label>
+                        <input type="text" name="skinquestion57" value="{php}echo session('skinquestion57');{/php}">
+                    </div>
+                    <div>
+                        <label> 身高:</label>
+                        <input type="text" name="skinquestion58" value="{php}echo session('skinquestion58');{/php}">
+                        <span>cm</span>
+                    </div>
+                    <div>
+                        <label> 体重:</label>
+                        <input type="text" name="skinquestion59" value="{php}echo session('skinquestion59');{/php}">
+                        <span>kg</span>
+                    </div>
+                </div>
+                <div class="position">
+                    <div data-toggle="distpicker" class="city">
+                        <span>中学居住城市：</span>
+                        <select name="province3" style="font-size:12px; padding-bottom:2px; vertical-align:top;" data-province="{php}echo session('province3');{/php}"></select>
+                        <br>
+                        <span style="visibility: hidden;">中学居住城市：</span>
+                        <select name="city3" style="font-size:12px; padding-bottom:2px; vertical-align:top;" data-city="{php}echo session('city3');{/php}"></select>
+                    </div>
+
+                    <div data-toggle="distpicker" class="city">
+                        <span>长期居住城市：</span>
+                        <select name="province" style="font-size:12px; padding-bottom:2px; vertical-align:top;" data-province="{php}echo session('province');{/php}"></select>
+                        <br>
+                        <span style="visibility: hidden;">长期居住城市：</span>
+                        <select name="city" style="font-size:12px; padding-bottom:2px; vertical-align:top;" data-city="{php}echo session('city');{/php}"></select>
+                    </div>
+                </div>
+                <div class="marriage_info">
+                    育否:
+                    <input type="radio" name="skinquestion61"  value="A"  {php} if ( session('skinquestion61') == 'A') { {/php} checked {php} } {/php} >是
+                    <input type="radio" name="skinquestion61"  value="B" {php} if ( session('skinquestion61') == 'B') { {/php} checked {php} } {/php}>否
+                    <input type="radio" name="skinquestion61"  value="C"   {php} if ( session('skinquestion61') == 'C') { {/php} checked {php} } {/php}>正在怀孕期
+                    <input type="radio" name="skinquestion61"  value="D"   {php} if ( session('skinquestion61') == 'D') { {/php} checked {php} } {/php}>正在哺乳期
+                </div>
+            </div>
+            <!-- 头部表单结束 -->
+            <div class="skin_info clearfix">
+
+                <div class="info_option">
+                    <p class="option_title">皮肤状态自我评定</p>
+                    <ul>
+                        <li data-id="1">肤色
+                            <span class="fa fa-caret-right show"></span>
+                        </li>
+                        <li data-id="2">胳膊肤色
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="3">红血丝
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="4">斑点
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="5">痘痘
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="6">抬头纹
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="7">眼尾纹
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="8">眉间纹
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="9">泪沟
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="10">法令纹
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                        <li data-id="11">嘴角纹
+                            <span class="fa fa-caret-right"></span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 1 -->
+                <div class="p0 detail now">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">肌肤透明度、亮度高，肤色白皙，整体状态亮白润泽。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-1.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-1.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-2.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-3.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-4.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas1-5.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv0" class="lineDiv">
+                                <div id="minDiv0" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="1" id="paperId0" class="paperId" name="page">
+                                <input type="hidden" value="64" id="questionId0" class="questionId" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion64')) ) {echo session('skinquestion64');} else {echo 0;}{/php}" name="skinquestion64" id="msg0" class="msg">
+                                <input type="hidden" value="22" id="move0" class="move">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="p1 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">肤色均匀，无明显色素沉着，偏向于白皙肤色。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas2-1.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas2-1.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas2-2.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas2-3.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas2-4.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas2-5.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv1" class="lineDiv">
+                                <div id="minDiv1" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="2" id="paperId1" class="paperId" name="page">
+                                <input type="hidden" value="65" id="questionId1" class="" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion65')) ) {echo session('skinquestion65');} else {echo 0;}{/php}" name="skinquestion65" id="msg1">
+                                <input type="hidden" value="22" id="move1" class="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="p2 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">肌肤基本没有红血丝分布，皮肤健康不易发红。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea2.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas9.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv2" class="lineDiv">
+                                <div id="minDiv2" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="3" id="paperId2" name="page">
+                                <input type="hidden" value="66" id="questionId2" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion66')) ) {echo session('skinquestion66');} else {echo 0;}{/php}" name="skinquestion66" id="msg2">
+                                <input type="hidden" value="22" id="move2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="p3 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">肤色均匀明亮，无斑点痘印等局部色素沉淀现象。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea2.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas4-1.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas4-2.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv3" class="lineDiv">
+                                <div id="minDiv3" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="4" id="paperId3" name="page">
+                                <input type="hidden" value="67" id="questionId3" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion67')) ) {echo session('skinquestion67');} else {echo 0;}{/php}" name="skinquestion67" id="msg3">
+                                <input type="hidden" value="22" id="move3">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="p4 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">基本没有痘痘粉刺出现，且面部无大量油光，整体皮肤状态健康。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea5.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas5-1.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas5-2.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv4" class="lineDiv">
+                                <div id="minDiv4" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="5" id="paperId4" name="page">
+                                <input type="hidden" value="68" id="questionId4" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion68')) ) {echo session('skinquestion68');} else {echo 0;}{/php}" name="skinquestion68" id="msg4">
+                                <input type="hidden" value="22" id="move4">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="p5 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">额头没有任何细纹及皱纹情况，皮肤弹性较好，在刻意抬眉的情况，皱褶也回弹很快。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea6.png">
+
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas6-1.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas6-2.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv5" class="lineDiv">
+                                <div id="minDiv5" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="6" id="paperId5" name="page">
+                                <input type="hidden" value="69" id="questionId5" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion69')) ) {echo session('skinquestion69');} else {echo 0;}{/php}" name="skinquestion69" id="msg5">
+                                <input type="hidden" value="22" id="move5">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="p6 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">眼角皮肤紧致平滑，即使大笑出现皱褶，也能很快恢复平滑。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea7.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas7.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv6" class="lineDiv">
+                                <div id="minDiv6" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="7" id="paperId6" name="page">
+                                <input type="hidden" value="70" id="questionId6" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion70')) ) {echo session('skinquestion70');} else {echo 0;}{/php}" name="skinquestion70" id="msg6">
+                                <input type="hidden" value="22" id="move6">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="p7 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">眉间皮肤紧致平滑，皮肤弹性较好，皱眉出现的皱褶回弹也很快。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea6.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas8.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv7" class="lineDiv">
+                                <div id="minDiv7" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="8" id="paperId7" name="page">
+                                <input type="hidden" value="71" id="questionId7" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion71')) ) {echo session('skinquestion71');} else {echo 0;}{/php}" name="skinquestion71" id="msg7">
+                                <input type="hidden" value="22" id="move7">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- </div>9 -->
+                <div class="p8 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">下眼睑处无任何凹沟或下垂现象，皮肤紧致饱满。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea7.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas9-1.png" class="subject-opacity" style="opacity: 0;">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas9-2.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv8" class="lineDiv">
+                                <div id="minDiv8" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="9" id="paperId8" name="page">
+                                <input type="hidden" value="72" id="questionId8" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion72')) ) {echo session('skinquestion72');} else {echo 0;}{/php}" name="skinquestion72"  id="msg8">
+                                <input type="hidden" value="22" id="move8">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="p9 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">鼻翼两侧没有任何纹路延伸凹陷，且皮肤弹性较好，即使大笑出现皱纹，也能很快回弹。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea10.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas10-9.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv9" class="lineDiv">
+                                <div id="minDiv9" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="10" id="paperId9" name="page">
+                                <input type="hidden" value="73" id="questionId9" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion73')) ) {echo session('skinquestion73');} else {echo 0;}{/php}" name="skinquestion73"  id="msg9">
+                                <input type="hidden" value="22" id="move9">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- 11 -->
+                <div class=" p10 detail">
+                    <div class="info_status">
+                        <p class="status_title">您目前的状态是:</p>
+                        <p class="status_info">嘴角皮肤紧致饱满，无任何细纹及下垂现象，皮肤弹性较好，即使有大表情动作出现皱褶，皮肤回弹也很快。</p>
+                    </div>
+
+                    <div class="info_pic">
+                        <div class="subject-box">
+                            <div class="subject-bg">
+                                <div class="subject-wrap">
+                                    <div class="subject-con">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/pea10.png">
+                                        <img src="https://static.inertiabiotech.com/uniskin/images-new/peas11-2.png" class="subject-opacity" style="opacity: 0;">
+                                    </div>
+                                    <div class="glass-cover"></div>
+                                </div>
+                            </div>
+                            <div id="lineDiv10" class="lineDiv">
+                                <div id="minDiv10" class="minDiv" style="transform: rotate(225deg);"></div>
+
+                                <input type="hidden" value="11" id="paperId10" name="page">
+                                <input type="hidden" value="74" id="questionId10" name="questionid">
+                                <input type="hidden" value="{php}if ( !empty(session('skinquestion74')) ) {echo session('skinquestion74');} else {echo 0;}{/php}" name="skinquestion74"  id="msg10">
+                                <input type="hidden" value="22" id="move10">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <img src="https://static.inertiabiotech.com/uniskin/images/questionnaire-images/face-arrow.gif" alt="">
+                </div>
+
+            </div>
+            <div class="pages">
+                <!-- <a href="javascript:;" class="prev">上一页</a> -->
+                <p class="page_num">
+                    <span class="page">1</span>/
+                    <span class="total_pages">4</span>
+                </p>
+                <a href="javascript:;" class="pagination" id="next_question">下一页</a>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script src="https://static.inertiabiotech.com/timegenes/js/jquery.min.js"></script>
+<script src="https://static.inertiabiotech.com/timegenes/js/distpicker.data.js"></script>
+<script src="https://static.inertiabiotech.com/timegenes/js/distpicker.js"></script>
+<script src="https://www.timegenes.com/web/public/js/dialog.js"></script>
+<!-- <script src="./js/main.js"></script> -->
+<script>
+    var index = 0;
+    var rotate_val = $(".lineDiv").eq(index).find("#msg+" + index + "").val() - 223;
+    console.log(rotate_val);
+    $(".minDiv").css("transform", "rotate(" + rotate_val + "deg");
+    $(".subject-opacity").css("opacity", rotate_val * 0.01);
+
+    $(function () {
+        $("form").submit(function () {
+            var self = $(this);
+            $.post(self.attr("action"), self.serialize(), success, "json");
+            return false;
+
+            function success(data) {
+                if (data.code) {
+                    window.location.href = data.url;
+                } else {
+                    var d = dialog({
+                        //icon: 'succeed',
+                        title: '错误',
+                        content: data.msg,
+                        lock: true
+                    });
+                    d.show();
+                    setTimeout(function () {
+                        d.close().remove();
+                    }, 3000);
+                }
+            }
+        });
+
+        $("#next_question").click(function () {
+            $('form').submit();
+        });
+        var paperId = $(".paperId0").val();
+        // console.log(paperId);
+        var questionId = $(".questionId0").val();
+        // console.log(questionId);
+        var minDiv = document.getElementById('minDiv0'); //小方块
+        var lineDiv = document.getElementById("lineDiv0");
+        var msg = document.getElementById("msg0").value;
+        index = 0;
+        move(lineDiv, minDiv, msg, 40, 100, index);
+
+
+    })
+
+    function showMesgValue(msgValue, index) {
+        switch (index) {
+            case 0:
+                if (msgValue == 0) {
+                    $(".subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+                    $(".status_info").text("肌肤透明度、亮度高，肤色白皙，整体状态亮白润泽。");
+
+                } else if (msgValue <= 20) {
+                    $(".subject-con").find("img").eq(1).css("opacity", msgValue * 0.05);
+                    $(".status_info").text("肌肤透明度、亮度高，肤色白皙，整体状态亮白润泽。");
+                    if (msgValue == 20) {
+                        $(".subject-con").find("img").eq(2).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".subject-con").find("img").eq(2).css("opacity", (msgValue - 20) * 0.05);
+                    $(".status_info").text("肌肤透明度、亮度不高，整体状态略显暗沉偏黄。");
+                    if (msgValue == 40) {
+                        $(".subject-con").find("img").eq(3).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 40 && msgValue <= 60) {
+                    $(".subject-con").find("img").eq(3).css("opacity", (msgValue - 40) * 0.05);
+                    $(".status_info").text("肌肤透明度、亮度偏低，整体状态暗沉偏黄，急需集中护理。");
+                    if (msgValue == 60) {
+                        $(".subject-con").find("img").eq(4).css("opacity", "0");
+                    }
+                } else if (msgValue > 60 && msgValue <= 80) {
+                    $(".subject-con").find("img").eq(4).css("opacity", (msgValue - 60) * 0.05);
+                    $(".status_info").text("肌肤透明度、亮度偏低，整体状态暗沉偏黄，急需集中护理。");
+
+                    if (msgValue == 80) {
+                        $(".subject-con").find("img").eq(5).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 80 && msgValue <= 100) {
+                    $(".subject-con").find("img").eq(5).css("opacity", (msgValue - 80) * 0.05);
+                    $(".status_info").text("肌肤透明度、亮度偏低，整体状态暗沉偏黄，急需集中护理。");
+                }
+                break;
+            case 1:
+
+                if (msgValue == 0) {
+                    $(".subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+                } else if (msgValue <= 20) {
+                    $(".p1 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.05);
+                    $(".status_info").text("肤色均匀，无明显色素沉着，偏向于白皙肤色。");
+                    if (msgValue == 20) {
+                        $(".subject-con").find("img").eq(2).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".p1 .subject-con").find("img").eq(2).css("opacity", (msgValue - 20) * 0.05);
+                    $(".status_info").text("肤色有少量色素沉着，整体较暗，偏向于暗黄肤色。");
+                    if (msgValue == 40) {
+                        $(".subject-con").find("img").eq(3).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 40 && msgValue <= 60) {
+                    $(".p1 .subject-con").find("img").eq(3).css("opacity", (msgValue - 40) * 0.05);
+                    $(".status_info").text("肤色有明显色素沉着，整体肤色暗，属于深色肤色。");
+                    if (msgValue == 60) {
+                        $(".subject-con").find("img").eq(4).css("opacity", "0");
+                    }
+                } else if (msgValue > 60 && msgValue <= 80) {
+                    $(".p1 .subject-con").find("img").eq(4).css("opacity", (msgValue - 60) * 0.05);
+                    $(".status_info").text("肤色有明显色素沉着，整体肤色暗，属于深色肤色。");
+                    if (msgValue == 80) {
+                        $(".subject-con").find("img").eq(5).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 80 && msgValue <= 100) {
+                    $(".p1 .subject-con").find("img").eq(5).css("opacity", (msgValue - 80) * 0.05);
+                    $(".status_info").text("肤色有明显色素沉着，整体肤色暗，属于深色肤色。");
+                }
+                break;
+            case 2:
+                $(".subject-opacity").css("opacity", msgValue * 0.01);
+                if (msgValue <= 20) {
+                    $(".status_info").text("肌肤基本没有红血丝分布，皮肤健康不易发红。");
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("肌肤有轻微发红情况，少量红血丝分布，皮肤偏向轻微敏感型。");
+
+                } else if (msgValue > 40 && msgValue <= 100) {
+
+                    $(".status_info").text("肌肤发红现象明显，红血丝分布较多，偏向敏感型皮肤。");
+                }
+                break;
+            case 3:
+                if (msgValue == 0) {
+                    $(".p3 .subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+                } else if (msgValue <= 20) {
+                    $(".status_info").text("肤色均匀明亮，无斑点痘印等局部色素沉淀现象。");
+                    $(".p3 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("皮肤有轻微斑点痘印等，轻度局部色素沉淀现象。");
+                    $(".p3 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                } else if (msgValue > 40 && msgValue <= 50) {
+                    $(".p3 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                    $(".status_info").text("皮肤有明显斑点痘印，局部色素沉淀现象明显。");
+                    if (msgValue == 50) {
+                        $(".p3 .subject-con").find("img").eq(2).css("opacity", "0");
+                        $(".status_info").text("皮肤有明显斑点痘印，局部色素沉淀现象明显。");
+                    }
+
+                } else if (msgValue > 50 && msgValue <= 100) {
+                    $(".p3 .subject-con").find("img").eq(1).css("opacity", 1);
+                    $(".p3 .subject-con").find("img").eq(2).css("opacity", (msgValue - 50) * 0.02);
+                    $(".status_info").text("皮肤有明显斑点痘印，局部色素沉淀现象明显。");
+                }
+
+
+
+
+                break;
+            case 4:
+                if (msgValue == 0) {
+                    $(".p4 .subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+                    $(".status_info").text("基本没有痘痘粉刺出现，且面部无大量油光，整体皮肤状态健康。");
+
+                } else if (msgValue <= 20) {
+                    $(".status_info").text("基本没有痘痘粉刺出现，且面部无大量油光，整体皮肤状态健康。");
+                    $(".p4 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("有少量轻微炎症痘痘及油光出现，但肌肤状态正常。");
+                    $(".p4 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                } else if (msgValue > 40 && msgValue <= 50) {
+                    $(".status_info").text("有明显炎症痘痘，且肌肤油光明显，肌肤状态较差。");
+                    $(".p4 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                    if (msgValue == 50) {
+                        $(".status_info").text("有明显炎症痘痘，且肌肤油光明显，肌肤状态较差。");
+                        $(".p4 .subject-con").find("img").eq(2).css("opacity", "0");
+                    }
+
+                } else if (msgValue > 50 && msgValue <= 100) {
+                    $(".p4 .subject-con").find("img").eq(1).css("opacity", 1);
+                    $(".p4 .subject-con").find("img").eq(2).css("opacity", (msgValue - 50) * 0.02);
+                    $(".status_info").text("有明显炎症痘痘，且肌肤油光明显，肌肤状态较差。");
+
+                }
+
+                break;
+            case 5:
+                if (msgValue == 0) {
+                    $(".p5 .subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+                    $(".status_info").text("额头没有任何细纹及皱纹情况，皮肤弹性较好，在刻意抬眉的情况，皱褶也回弹很快。");
+                } else if (msgValue <= 20) {
+                    $(".status_info").text("额头没有任何细纹及皱纹情况，皮肤弹性较好，在刻意抬眉的情况，皱褶也回弹很快。");
+                    $(".p5 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.01);
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("额头有轻微细纹，皮肤弹性下降，做抬眉动作时皱褶回弹较慢。");
+                    $(".p5 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+
+                } else if (msgValue > 40 && msgValue < 50) {
+                    $(".status_info").text("额头有明显皱纹，皮肤松弛，即使没有表情活动也会有皱纹出现。");
+                    $(".p5 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+
+                } else if (msgValue == 50) {
+                    $(".p5 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                    $(".p5 .subject-con").find("img").eq(2).css("opacity", "0");
+                    $(".status_info").text("额头有明显皱纹，皮肤松弛，即使没有表情活动也会有皱纹出现。");
+                } else if (msgValue > 50 && msgValue <= 100) {
+                    $(".p5 .subject-con").find("img").eq(1).css("opacity", 1);
+                    $(".p5 .subject-con").find("img").eq(2).css("opacity", (msgValue - 50) * 0.02);
+                    $(".status_info").text("额头有明显皱纹，皮肤松弛，即使没有表情活动也会有皱纹出现。");
+                }
+                break;
+            case 6:
+                $(".subject-opacity").css("opacity", msgValue * 0.01);
+                if (msgValue <= 20) {
+                    $(".status_info").text("眼角皮肤紧致平滑，即使大笑出现皱褶，也能很快恢复平滑。");
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("眼角皮肤稍有松弛或干燥情况，有干燥细纹，或大笑时会有皱纹出现，并且恢复速度较慢。");
+
+                } else if (msgValue > 40 && msgValue <= 100) {
+
+                    $(".status_info").text("眼角皮肤出现松弛情况，没有表情时，也有皱纹或松弛情况。");
+                }
+                break;
+            case 7:
+                $(".subject-opacity").css("opacity", msgValue * 0.01);
+                if (msgValue <= 20) {
+                    $(".status_info").text("眉间皮肤紧致平滑，皮肤弹性较好，皱眉出现的皱褶回弹也很快。");
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("眉间皮肤稍有松弛情况，皱眉时会有明显川字皱纹，并且恢复速度较慢。");
+
+                } else if (msgValue > 40 && msgValue <= 100) {
+
+                    $(".status_info").text("眉间皮肤出现松弛情况，没有表情时，也有川字皱纹存在。");
+                }
+                break;
+            case 8:
+                if (msgValue == 0) {
+                    $(".p8 .subject-con").find("img").filter(".subject-opacity").css("opacity", "0");
+                } else if (msgValue <= 20) {
+                    $(".status_info").text("下眼睑处无任何凹沟或下垂现象，皮肤紧致饱满。");
+                    $(".p8 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("下眼睑处有轻微凹沟及细纹，皮肤轻微下垂。");
+                    $(".p8 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                } else if (msgValue > 40 && msgValue <= 50) {
+                    $(".p8 .subject-con").find("img").eq(1).css("opacity", msgValue * 0.02);
+                    $(".status_info").text("下眼睑处有轻微凹沟及细纹，皮肤轻微下垂。");
+                    if (msgValue == 50) {
+                        $(".p8 .subject-con").find("img").eq(1).css("opacity", "1");
+                        $(".p8 .subject-con").find("img").eq(2).css("opacity", "0");
+                        $(".status_info").text("下眼睑处有轻微凹沟及细纹，皮肤轻微下垂。");
+                    }
+
+                } else if (msgValue > 50 && msgValue <= 100) {
+                    $(".p8 .subject-con").find("img").eq(1).css("opacity", 1);
+                    $(".p8 .subject-con").find("img").eq(2).css("opacity", (msgValue - 50) * 0.02);
+                    $(".status_info").text("下眼睑处有明显凹沟及皱纹，皮肤明显松弛下垂。");
+                }
+                break;
+            case 9:
+                $(".subject-opacity").css("opacity", msgValue * 0.01);
+                if (msgValue <= 20) {
+                    $(".status_info").text("鼻翼两侧没有任何纹路延伸凹陷，且皮肤弹性较好，即使大笑出现皱纹，也能很快回弹。");
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("鼻翼两侧有轻微纹路延伸及凹陷，皮肤稍有松弛，有大表情动作出现皱纹时，回弹较慢。");
+
+                } else if (msgValue > 40 && msgValue <= 100) {
+
+                    $(".status_info").text("鼻翼两侧有明显纹路延伸及凹陷，即使没有大表情情况下，也有明显松弛皱纹。");
+                }
+                break;
+            case 10:
+                $(".subject-opacity").css("opacity", msgValue * 0.01);
+                if (msgValue <= 20) {
+                    $(".status_info").text("嘴角皮肤紧致饱满，无任何细纹及下垂现象，皮肤弹性较好，即使有大表情动作出现皱褶，皮肤回弹也很快。");
+
+                } else if (msgValue > 20 && msgValue <= 40) {
+                    $(".status_info").text("嘴角皮肤稍有松弛情况，有大表情动作出现皱纹时，恢复较慢。");
+
+                } else if (msgValue > 40 && msgValue <= 100) {
+
+                    $(".status_info").text("嘴角皮肤松弛情况明显，即使没有大表情情况下，也有明显松弛皱纹。");
+                }
+
+
+        }
+
+    }
+
+
+    function move(lineDiv, minDiv, msg, boxWidth, allWidth) {
+        var lineDiv = document.getElementById('lineDiv' + index); //长线条
+        var minDiv = document.getElementById('minDiv' + index); //小方块
+        var msg = document.getElementById("msg" + index);
+        var ifBool = false; //判断鼠标是否按下
+        //鼠标按下方块
+        minDiv.addEventListener("mousedown", function (e) {
+            $(document).bind("mousemove", function (e) {
+                e.preventDefault();
+            });
+            ifBool = true;
+        });
+        //拖动
+        window.addEventListener("mousemove", function (e) {
+            if (ifBool) {
+                var x = e.clientX; //鼠标横坐标var x
+                var y = e.clientY; //鼠标横坐标var y
+                var lineDiv_left = getPosition(lineDiv).left; //长线条的横坐标
+                var minDiv_left = x - lineDiv_left; //小方块相对于父元素（长线条）的left值
+                if (minDiv_left >= lineDiv.offsetWidth - boxWidth) {
+                    minDiv_left = lineDiv.offsetWidth - boxWidth;
+                } else if (minDiv_left < 0) {
+                    minDiv_left = 0;
+                }
+                //设置拖动后小方块的left值
+                msg.value = parseInt((minDiv_left / (lineDiv.offsetWidth - boxWidth)) * allWidth);
+                var rotate = 225 - msg.value;
+                minDiv.style.webkitTransform = "rotate(" + rotate + "deg)";
+                var opacity = msg.value;
+                showMesgValue(msg.value, index);
+            }
+        });
+        //鼠标松开
+        window.addEventListener("mouseup", function (e) {
+            ifBool = false;
+            $(document).unbind("mousemove");
+        });
+        //获取元素的绝对位置
+        function getPosition(node) {
+            var left = node.offsetLeft; //获取元素相对于其父元素的left值var left
+            var top = node.offsetTop;
+            current = node.offsetParent; // 取得元素的offsetParent
+            // 一直循环直到根元素
+            while (current != null) {
+                left += current.offsetLeft;
+                top += current.offsetTop;
+                current = current.offsetParent;
+            }
+            return {
+                "left": left,
+                "top": top
+            };
+        }
+    }
+
+    // tab 栏
+    $(function () {
+        // var index = 0;
+        $(".info_option li").on("click", function (e) {
+            e.preventDefault();
+            $(this).children("span").addClass("show").parent().siblings().find("span").removeClass(
+                "show");
+            index = $(this).index();
+            console.log(index);
+            $(".skin_info .detail").eq(index).addClass("now").siblings().removeClass("now");
+            // 切换不同图片区域的拖拽事件
+            var lineDiv = document.getElementById('lineDiv' + index); //长线条
+            var minDiv = document.getElementById('minDiv' + index); //小方块
+            var msg = document.getElementById("msg" + index);
+            move(lineDiv, minDiv, msg, 40, 100, index);
+
+            // 对应不同图片区域的显示信息
+
+        });
+
+        $(".arrow").on("click", function () {
+            if (index > 10) {
+                index = 10;
+            }
+            index++;
+            $(".info_option li").eq(index).find("span").addClass("show").parent().siblings().find(
+                "span").removeClass("show");
+
+            $(".skin_info .detail").eq(index).addClass("now").siblings().removeClass("now");
+            // 切换不同图片区域的拖拽事件
+            var lineDiv = document.getElementById('lineDiv' + index); //长线条
+            var minDiv = document.getElementById('minDiv' + index); //小方块
+            var msg = document.getElementById("msg" + index);
+            move(lineDiv, minDiv, msg, 40, 100, index);
+
+            // 对应不同图片区域的显示信息
+
+        });
+
+
+
+
+    })
+</script>
+
+
+</html>
